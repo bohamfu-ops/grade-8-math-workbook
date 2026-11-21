@@ -1,0 +1,1455 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A Grade 8 math workbook on square roots, right triangles, and solids, with 110 original questions and 110 matching practice problems.">
+<title>Grade 8 Math Workbook | Geometry &amp; Number Sense</title>
+<style>:root {
+  color-scheme: light;
+  --ink: #142440;
+  --body: #26384f;
+  --muted: #4c6078;
+  --navy: #102343;
+  --blue: #224b99;
+  --green: #245a47;
+  --paper: #f9f7ef;
+  --white: #fffefa;
+  --line: #d6dde4;
+  --sans: 'Trebuchet MS', 'Aptos', sans-serif;
+  --serif: Georgia, 'Book Antiqua', serif;
+  --mono: 'Cascadia Mono', Consolas, monospace;
+  background: var(--paper);
+  color: var(--body);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--blue); }
+button, select { font: inherit; }
+button, select, summary { cursor: pointer; }
+:where(a, button, select, summary):focus-visible { outline: 3px solid #2560bd; outline-offset: 4px; }
+h1, h2, h3, h4, p, figure { margin: 0; }
+h1, h2, h3, h4 { color: var(--ink); line-height: 1.12; }
+.shell { width: min(100% - 64px, 1312px); margin-inline: auto; }
+.skip { position: absolute; top: .5rem; left: .5rem; padding: .5rem 1rem; background: white; z-index: 5; transform: translateY(-150%); }
+.skip:focus { transform: none; }
+.masthead { border-bottom: 1px solid #244269; background: var(--navy); color: #d8e8fc; }
+.masthead-inner { min-height: 65px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.mast-brand { color: #f8fafb; font-weight: 700; display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; }
+.mast-brand svg { color: #ffcb83; flex: none; }
+.mast-grade { color: #c5d8f7; font: .75rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.cover { background: var(--navy); color: #e2eafa; overflow: hidden; }
+.cover-inner { min-height: 451px; display: grid; grid-template-columns: 1.18fr 1fr; gap: clamp(24px, 5vw, 86px); align-items: center; padding-block: 48px 57px; }
+.kicker { color: #ffc879; font: 700 .78rem/1.45 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.cover h1 { color: #fffaf0; font: 700 clamp(3.2rem, 6.35vw, 6.05rem)/.96 var(--serif); letter-spacing: -.065em; margin-block: .2em .24em; }
+.cover h1 span { display: block; }
+.cover .intro { max-width: 34rem; font-size: clamp(1.03rem, 1.7vw, 1.19rem); color: #dbe7fa; }
+.cover-link { display: inline-flex; align-items: center; gap: .75rem; margin-top: 1.55rem; padding: .62rem .94rem; border-radius: 6px; background: #e4efec; text-decoration: none; font-weight: 700; color: #183d43; }
+.cover-link:hover { background: #fffaf0; }
+.masthead a:focus-visible, .cover a:focus-visible { outline-color: #ffc879; }
+.hero-art { display: block; width: 100%; max-width: 492px; justify-self: end; }
+.index { padding-block: 48px 49px; }
+.index-head { display: flex; gap: 1rem 2rem; justify-content: space-between; align-items: end; margin-bottom: 1.1rem; }
+.index h2, .chapter h2 { font: 700 clamp(2.25rem, 4.1vw, 3.8rem)/1.02 var(--serif); letter-spacing: -.049em; }
+.index-count { color: var(--muted); font: .8rem/1.5 var(--mono); }
+.index ol { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 13px; margin: 0; }
+.index li { min-width: 0; }
+.index a { display: flex; align-items: center; gap: .7rem; height: 100%; background: var(--white); border: 1px solid var(--line); border-radius: 5px; padding: .65rem .8rem; text-decoration: none; color: var(--ink); line-height: 1.3; font-weight: 700; font-size: .91rem; }
+.index a:hover { border-color: #4677bd; color: var(--blue); background: #f0f5fb; }
+.index a span { color: var(--blue); font: 700 .77rem var(--mono); flex: none; }
+.reading { display: grid; grid-template-columns: minmax(175px, 222px) minmax(0, 1fr); gap: clamp(24px, 4.2vw, 56px); align-items: start; padding-bottom: 4rem; }
+.rail { position: sticky; top: 1.2rem; max-height: calc(100dvh - 2.4rem); overflow: auto; scrollbar-width: thin; border-top: 2px solid #a9b9cc; padding: .9rem .25rem .25rem 0; }
+.rail p { color: var(--ink); font: 700 .76rem var(--mono); text-transform: uppercase; letter-spacing: .08em; margin: 0 0 .7rem .65rem; }
+.rail ol { list-style: none; padding: 0; margin: 0; }
+.rail a { display: grid; grid-template-columns: 1.45rem 1fr; align-items: baseline; gap: .25rem; padding: .45rem .65rem; border-radius: 5px; text-decoration: none; color: var(--muted); font-size: .84rem; line-height: 1.3; }
+.rail a span { font: .72rem var(--mono); }
+.rail a:hover, .rail a[aria-current] { color: var(--blue); background: #e8eef8; }
+.rail a[aria-current] { box-shadow: inset 3px 0 var(--blue); font-weight: 700; }
+.mobile-nav { display: none; }
+.chapter { scroll-margin-top: .7rem; border-top: 4px solid var(--accent); padding: 1.45rem 0 0; margin-bottom: 4.6rem; --accent: #2d57a0; --tint: #eef3fa; }
+.chapter:last-child { margin-bottom: 0; }
+.chapter[data-strand="Spatial Reasoning"] { --accent: #2c6352; --tint: #eaf3ed; }
+.chapter[data-strand="Number Sense"] { --accent: #99501c; --tint: #f7eedf; }
+.chapter-kicker { color: var(--accent); font: 700 .78rem/1.5 var(--mono); letter-spacing: .08em; text-transform: uppercase; margin-bottom: .6rem; }
+.chapter .source { margin-top: .5rem; color: var(--muted); font-size: .8rem; }
+.chapter .goal { margin-top: .6rem; font-size: 1.11rem; max-width: 49rem; }
+.source-note { border-left: 3px solid var(--accent); margin-top: 1rem; padding: .15rem .75rem; color: var(--muted); font-size: .88rem; }
+.theory { margin: 1.45rem 0 1.25rem; padding: clamp(17px, 3vw, 29px); background: var(--tint); border: 1px solid #d4dce4; border-radius: 12px; }
+.theory h3 { font: 700 1.58rem var(--serif); }
+.theory-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: center; gap: 1.45rem; margin-top: .75rem; }
+.concepts { display: grid; gap: .72rem; }
+.concepts h4 { font-size: .98rem; margin-bottom: .17rem; }
+.concepts p, .worked p { font-size: .95rem; }
+.worked { border-top: 1px solid #c4d1da; margin-top: 1.05rem; padding-top: .8rem; }
+.worked h4 { font: 700 .73rem var(--mono); text-transform: uppercase; letter-spacing: .075em; color: var(--accent); margin-bottom: .25rem; }
+.diagram { text-align: center; min-width: 0; }
+.diagram svg { display: block; width: 100%; max-width: 365px; margin-inline: auto; overflow: visible; }
+.diagram svg text { fill: var(--ink); font: 700 17px var(--sans); }
+.diagram svg .figure-label { font-size: 15px; }
+.diagram svg .hot { fill: #934710; }
+.diagram svg :is(.shape, .face-top, .face-front, .face-side) { stroke: #294a6b; stroke-width: 2; stroke-linejoin: round; }
+.shape { fill: #dbe9fa; }
+.face-top { fill: #cfeadd; }
+.face-front { fill: #dbe9fa; }
+.face-side { fill: #fae1b4; }
+.diagram svg :is(.marker, .dashed, .gridlines, .linkline) { fill: none; stroke: #496886; stroke-width: 2; stroke-linejoin: round; }
+.diagram svg .marker { stroke: #1b426c; stroke-width: 2.5; }
+.diagram svg .dashed { stroke-dasharray: 6 4; }
+.neutral { fill: #fffefa; stroke: #496886; stroke-width: 2; }
+.prime { fill: #e0ebfd; stroke: #385e92; stroke-width: 2; }
+.diagram figcaption { color: var(--muted); font-size: .78rem; line-height: 1.4; margin: .25rem auto 0; max-width: 30ch; }
+.tree { margin-top: .75rem; }
+.tree svg { max-width: 270px; }
+.chapter-tools { display: flex; flex-wrap: wrap; align-items: start; justify-content: space-between; gap: .7rem; margin-bottom: 1.6rem; }
+.jump { display: flex; flex-wrap: wrap; align-items: center; gap: .29rem; }
+.jump-label { font: 700 .76rem var(--mono); text-transform: uppercase; margin-right: .3rem; letter-spacing: .04em; }
+.jump a { display: grid; place-items: center; color: var(--blue); min-height: 32px; min-width: 32px; padding: 2px; border: 1px solid var(--line); border-radius: 4px; background: var(--white); text-decoration: none; font: 700 .77rem var(--mono); }
+.jump a:hover, .actions button:hover { background: #e8eef8; border-color: #8fa8cc; }
+.actions { display: none; gap: .45rem; flex-wrap: wrap; }
+.enhanced .actions { display: flex; }
+.actions button { color: var(--ink); background: var(--white); border: 1px solid #a7b7cb; border-radius: 6px; font-weight: 700; font-size: .82rem; padding: .36rem .65rem; }
+.set-title { font: 700 1.4rem/1.15 var(--serif); margin: 1.38rem 0 .6rem; }
+.directions { margin: .33rem 0 .8rem; max-width: 76ch; font-size: .92rem; }
+.wordbank { padding: .55rem .75rem; border: 1px dashed #a1b1c4; border-radius: 5px; background: var(--white); font-size: .91rem; margin: .6rem 0 .9rem; }
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: minmax(0, 1fr) auto; gap: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--white); margin: 0 0 .75rem; scroll-margin-top: 1.2rem; overflow: hidden; }
+.pair:target { outline: 3px solid #3d70b7; outline-offset: 2px; }
+.task { padding: .9rem clamp(12px, 2vw, 21px); }
+.task.original { grid-column: 1; grid-row: 1; }
+.task.practice { grid-column: 2; grid-row: 1; }
+.task.practice, .solution.practice { background: #eff5f1; border-left: 1px solid var(--line); }
+.task h4 { font: 700 .75rem/1.4 var(--mono); letter-spacing: .045em; text-transform: uppercase; margin-bottom: .38rem; color: var(--blue); }
+.task h4 span { font-weight: 400; text-transform: none; letter-spacing: 0; }
+.task.practice h4 { color: var(--green); }
+.prompt { font-size: 1rem; }
+.reference { display: inline-block; font-size: .81rem; margin-top: .32rem; }
+.table-frame, .two-figures, #c3-shared-box, #c6-box { scroll-margin-top: 4.6rem; }
+.choices { display: grid; gap: .12rem; padding-left: 1.65rem; margin: .45rem 0 0; font-size: .92rem; }
+.choices li::marker { font-weight: 700; color: var(--blue); }
+.choices.unlettered { list-style-type: disc; }
+.task .diagram { margin: .55rem 0 0; }
+.task .diagram svg { max-width: 235px; }
+.task .diagram figcaption { max-width: none; }
+.solution { min-width: 0; border-top: 1px solid var(--line); }
+.solution.original { grid-column: 1; grid-row: 2; }
+.solution.practice { grid-column: 2; grid-row: 2; }
+.solution summary { padding: .53rem clamp(12px, 2vw, 21px); font-size: .84rem; font-weight: 700; color: var(--blue); }
+.solution.practice summary { color: var(--green); }
+.solution summary:hover { background: #e4ecf7; }
+.solution.practice summary:hover { background: #e1eee7; }
+.solution summary:focus-visible { outline-offset: -4px; }
+.solution-body { padding: .1rem clamp(12px, 2vw, 21px) .85rem; overflow-wrap: anywhere; }
+.reasoning { padding: 0; margin: 0; font-size: .93rem; }
+ol.reasoning { padding-left: 1.35rem; }
+.reasoning li + li { margin-top: .25rem; }
+.answer { background: #e8eff9; color: #163c78; font-size: .9rem; border-left: 3px solid #4b79bd; border-radius: 3px; padding: .39rem .57rem; margin-top: .65rem; }
+.solution.practice .answer { background: #dcece1; color: #1e4e3f; border-left-color: #478365; }
+.table-frame { margin: .6rem 0 .85rem; }
+table { border-collapse: collapse; width: 100%; table-layout: fixed; background: var(--white); font-size: .9rem; }
+th, td { padding: .48rem .52rem; border: 1px solid var(--line); text-align: center; overflow-wrap: anywhere; }
+thead { background: #eaf1fb; }
+thead th:first-child { width: 25%; }
+thead th:last-child { width: 28%; }
+tbody th { font-weight: 400; }
+.two-figures { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; margin: .6rem 0 .85rem; }
+.two-figures .diagram { background: var(--white); border: 1px solid var(--line); border-radius: 6px; padding: .25rem .65rem .55rem; }
+.two-figures .diagram svg { max-width: 260px; }
+.blank { display: inline-block; vertical-align: baseline; }
+.footer { padding: 1.45rem 0; background: #e9eee9; color: var(--muted); font-size: .82rem; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; gap: .75rem; }
+.footer a { font-weight: 700; }
+@media (max-width: 1020px) {
+  .reading { grid-template-columns: 165px minmax(0, 1fr); gap: 20px; }
+  .cover-inner { min-height: auto; }
+}
+@media (max-width: 820px) {
+  .shell { width: calc(100% - 44px); }
+  .reading { display: block; }
+  .rail { display: none; }
+  .enhanced .mobile-nav { display: flex; position: sticky; top: 0; z-index: 2; align-items: center; gap: .65rem; padding: .56rem 0; margin-bottom: 1.1rem; background: var(--paper); border-block: 1px solid var(--line); }
+  .mobile-nav label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .mobile-nav select { min-width: 0; width: 100%; color: var(--ink); background: var(--white); border: 1px solid #9fb0c7; border-radius: 5px; padding: .41rem .53rem; font-size: .94rem; }
+  .chapter, .pair { scroll-margin-top: 4.6rem; }
+}
+@media (max-width: 610px) {
+  .shell { width: calc(100% - 34px); }
+  .masthead-inner { min-height: 56px; }
+  .mast-grade { font-size: .63rem; letter-spacing: .06em; }
+  .cover-inner { display: block; padding-block: 38px 26px; }
+  .cover h1 { font-size: clamp(3rem, 11.1vw, 4.7rem); }
+  .hero-art { max-width: 345px; margin: 1.55rem auto 0; }
+  .index { padding-block: 32px; }
+  .index-head { display: block; }
+  .index-count { margin-top: .45rem; }
+  .index ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .index a { padding: .54rem .45rem; gap: .4rem; font-size: .8rem; }
+  .index a span { font-size: .68rem; }
+  .theory-grid { grid-template-columns: 1fr; gap: .9rem; }
+  .theory-grid > .diagram { max-width: 345px; width: 100%; justify-self: center; }
+  .chapter { margin-bottom: 3.5rem; }
+  .pair { display: block; }
+  .task.practice, .solution.practice { border-left: 0; }
+  .task.practice { border-top: 1px solid var(--line); }
+}
+@media print {
+  @page { size: letter; margin: 12mm; }
+  :root, body { background: white; font-size: 10pt; color: #172132; }
+  .shell { width: 100%; max-width: none; }
+  .masthead, .cover, .index, .rail, .mobile-nav, .footer, .chapter-tools, .skip { display: none !important; }
+  .reading, .pair { display: block; padding: 0; }
+  .chapter { break-before: page; border-top-width: 2px; margin: 0; padding-top: .7rem; }
+  .chapter:first-of-type { break-before: auto; }
+  .printing-chapter .chapter { display: none; }
+  .printing-chapter .chapter.print-target { display: block; break-before: auto; }
+  .chapter h2 { font-size: 24pt; }
+  .theory { border-radius: 4px; padding: .55rem; margin: .8rem 0; }
+  .theory-grid { display: grid; grid-template-columns: 1.7fr 1fr; }
+  .theory-grid svg { max-height: 118px; }
+  .pair, .two-figures, .table-frame, .theory { break-inside: avoid; }
+  .pair { border-radius: 4px; }
+  .pair:target { outline: none; }
+  .task { padding: .45rem .6rem; }
+  .task:has(+ .solution:not([open]))::after { content: ''; display: block; border-bottom: 1px solid #a9b5c2; height: 1.3rem; }
+  .task.practice { border-left: 0; border-top: 1px solid var(--line); }
+  .reference { display: none; }
+  .solution.practice { border-left: 0; }
+  .solution:not([open]), .solution summary { display: none; }
+  .solution[open] .solution-body { padding: .45rem .6rem; }
+  .diagram svg { max-height: 106px; }
+  .set-title { break-after: avoid; }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#chapters">Skip to chapters</a>
+<header class="masthead"><div class="shell masthead-inner"><a class="mast-brand" href="#top">
+<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h17V4ZM14 20v-6h6" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round"/></svg> Math Workbook</a>
+<span class="mast-grade">Grade 8 Mathematics</span></div></header>
+<section class="cover" aria-labelledby="workbook-title"><div class="shell cover-inner"><div>
+<p class="kicker">Grade 8 · Lessons &amp; practice</p>
+<h1 id="workbook-title">Geometry &amp; <span>Number Sense</span></h1>
+<p class="intro">Work with square roots, solve right triangles, and see how flat views and nets describe solid shapes. Try each original question and its matching practice problem, then open the worked solutions.</p>
+<a class="cover-link" href="#chapters">Browse chapters <span aria-hidden="true">↓</span></a>
+</div><svg class="hero-art" viewBox="0 0 490 369" role="img" aria-label="A blueprint of a triangular prism highlighting a 3–4–5 right triangle.">
+<defs><pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#d1e1fe" stroke-opacity=".16"/></pattern></defs>
+<rect x="0" y="0" width="490" height="369" rx="16" fill="url(#grid)"/>
+<g stroke-width="2" stroke-linejoin="round"><path d="M71 236L263 92L263 236Z" fill="#31568e" stroke="#a9c7ff"/>
+<path d="M263 92L397 133V277L263 236Z" fill="#253d75" stroke="#a9c7ff"/>
+<path d="M71 236L205 277H397L263 236Z" fill="#254575" stroke="#a9c7ff"/>
+<path d="M71 236L263 92L397 133L205 277Z" fill="#5178b4" stroke="#a9c7ff"/>
+<path d="M205 277L397 133V277Z" fill="#2c5387" stroke="#ceefe0" stroke-width="3"/>
+<path d="M374 277v-23h23" fill="none" stroke="#ceefe0"/><path d="M205 277L397 133" stroke="#ffc16e" stroke-width="4"/>
+<path d="M205 298H397M205 290v16m192-16v16M421 133v144m-8-144h16m-16 144h16" stroke="#a9c7ff" fill="none"/></g>
+<g fill="#d7e7ff" font-family="Consolas, monospace" font-size="20"><text x="294" y="328">4</text><text x="440" y="212">3</text><text x="275" y="198" fill="#ffc16e">5</text></g></svg></div></section>
+<nav class="shell index" id="chapters" aria-labelledby="index-title"><div class="index-head">
+<h2 id="index-title">Chapters</h2><p class="index-count">13 chapters <span aria-hidden="true">·</span> 110 originals <span aria-hidden="true">·</span> 110 practice problems</p></div><ol><li><a href="#chapter-1"><span>01</span>The Pythagorean theorem</a></li><li><a href="#chapter-2"><span>02</span>Geometry vocabulary &amp; views</a></li><li><a href="#chapter-3"><span>03</span>Reconstructing a 3D box</a></li><li><a href="#chapter-4"><span>04</span>Faces, edges, nets &amp; views</a></li><li><a href="#chapter-5"><span>05</span>Congruent triangles</a></li><li><a href="#chapter-6"><span>06</span>Drawing and reading solids</a></li><li><a href="#chapter-7"><span>07</span>Squares, roots &amp; right triangles</a></li><li><a href="#chapter-8"><span>08</span>Checking a claimed diagonal</a></li><li><a href="#chapter-9"><span>09</span>Testing side lengths in any order</a></li><li><a href="#chapter-10"><span>10</span>Anatomy of a right triangle</a></li><li><a href="#chapter-11"><span>11</span>Perfect squares &amp; prime factors</a></li><li><a href="#chapter-12"><span>12</span>Estimating and finding roots</a></li><li><a href="#chapter-13"><span>13</span>From area to side length</a></li></ol></nav>
+<div class="shell reading"><nav class="rail" aria-label="Workbook chapters"><p>Chapters</p><ol><li><a href="#chapter-1"><span>01</span>The Pythagorean theorem</a></li><li><a href="#chapter-2"><span>02</span>Geometry vocabulary &amp; views</a></li><li><a href="#chapter-3"><span>03</span>Reconstructing a 3D box</a></li><li><a href="#chapter-4"><span>04</span>Faces, edges, nets &amp; views</a></li><li><a href="#chapter-5"><span>05</span>Congruent triangles</a></li><li><a href="#chapter-6"><span>06</span>Drawing and reading solids</a></li><li><a href="#chapter-7"><span>07</span>Squares, roots &amp; right triangles</a></li><li><a href="#chapter-8"><span>08</span>Checking a claimed diagonal</a></li><li><a href="#chapter-9"><span>09</span>Testing side lengths in any order</a></li><li><a href="#chapter-10"><span>10</span>Anatomy of a right triangle</a></li><li><a href="#chapter-11"><span>11</span>Perfect squares &amp; prime factors</a></li><li><a href="#chapter-12"><span>12</span>Estimating and finding roots</a></li><li><a href="#chapter-13"><span>13</span>From area to side length</a></li></ol></nav>
+<main id="workbook"><div class="mobile-nav"><label for="chapter-select">Jump to chapter</label>
+<select id="chapter-select"><option value="">Jump to chapter</option><option value="chapter-1">01 · The Pythagorean theorem</option><option value="chapter-2">02 · Geometry vocabulary &amp; views</option><option value="chapter-3">03 · Reconstructing a 3D box</option><option value="chapter-4">04 · Faces, edges, nets &amp; views</option><option value="chapter-5">05 · Congruent triangles</option><option value="chapter-6">06 · Drawing and reading solids</option><option value="chapter-7">07 · Squares, roots &amp; right triangles</option><option value="chapter-8">08 · Checking a claimed diagonal</option><option value="chapter-9">09 · Testing side lengths in any order</option><option value="chapter-10">10 · Anatomy of a right triangle</option><option value="chapter-11">11 · Perfect squares &amp; prime factors</option><option value="chapter-12">12 · Estimating and finding roots</option><option value="chapter-13">13 · From area to side length</option></select></div><section class="chapter" id="chapter-1" aria-labelledby="title-1" data-strand="Geometry">
+<header><p class="chapter-kicker">Chapter 01 <span aria-hidden="true">/</span> Geometry</p>
+<h2 id="title-1">The Pythagorean theorem</h2>
+<p class="source">Image 1 · Bell ringer · Grade 8, Week 2</p>
+<p class="goal">Identify the hypotenuse, test side lengths, and find a rectangle’s diagonal.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Find the 90° corner</h4><p>The legs meet at the right angle. The hypotenuse is across from that angle and is always the longest side. In the diagram, a and b are the legs and c is the hypotenuse.</p></div><div><h4>Find a missing length</h4><p>For a right triangle, a² + b² = c². To find the hypotenuse, add the squares of the legs and take the positive square root. To find a leg, subtract the square of the known leg from c² first.</p></div><div><h4>Work backward</h4><p>To test three possible side lengths, use the largest as c. If the two smaller squares add to c², the Pythagorean converse proves that the triangle is right.</p></div></div>
+<figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A triangle with base a, vertical side b, and opposite side c. The small square marks the corner where a and b meet." xmlns="http://www.w3.org/2000/svg"><path class="shape" d="M45 174H305V58Z"/><path class="marker" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">a</text><text x="315" y="119" text-anchor="start">b</text><text class="hot" x="154" y="105" text-anchor="middle">c</text></svg><figcaption>The right-angle marker identifies the corner where the two legs meet.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>A rectangle measures 12 ft by 16 ft. Its edges meet at 90°, so the diagonal is √(12² + 16²) ft = √400 ft = 20 ft.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 1 questions"><span class="jump-label">Jump to question</span><a href="#c1-q1" aria-label="Question 1">1</a><a href="#c1-q2" aria-label="Question 2">2</a><a href="#c1-q3" aria-label="Question 3">3</a><a href="#c1-q4" aria-label="Question 4">4</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Bell ringer</h3><p class="directions">Draw a right triangle and show your work for Questions 2–4.</p><article class="pair" id="c1-q1" aria-label="Question 1 and matching practice">
+<div class="task original"><h4>Original 1 <span>· Vocabulary</span></h4><p class="prompt">In a right triangle, z is opposite 90°. Which side is the hypotenuse?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Find the 90° corner. The side across from that corner is the hypotenuse. The prompt names that side z.</p>
+<p class="answer"><strong>Side z</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In a right triangle, side k is across from the 90° angle. Which side is the hypotenuse?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The hypotenuse is across from the right angle. Side k is in that position.</p>
+<p class="answer"><strong>Side k</strong></p></div></details>
+</article><article class="pair" id="c1-q2" aria-label="Question 2 and matching practice">
+<div class="task original"><h4>Original 2 <span>· Find the hypotenuse</span></h4><p class="prompt">A right triangle has legs 5 cm and 12 cm. Find the hypotenuse.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The labeled sketch places 5 cm and 12 cm at the right angle. Let c be the side across from it.</li><li>c² = 5² + 12² = 25 + 144 = 169.</li><li>c = √169 = 13 cm. A length uses the positive root.</li></ol><figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A triangle with base 12 cm, vertical side 5 cm, and opposite side c. The small square marks the corner where 12 cm and 5 cm meet." xmlns="http://www.w3.org/2000/svg"><path class="shape" d="M45 174H305V58Z"/><path class="marker" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">12 cm</text><text x="315" y="119" text-anchor="start">5 cm</text><text class="hot" x="154" y="105" text-anchor="middle">c</text></svg></figure>
+<p class="answer"><strong>13 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A right triangle has legs 9 cm and 12 cm. Find the hypotenuse.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Let c be the hypotenuse. Squaring both legs and adding gives c² = 9² + 12² = 81 + 144 = 225.</li><li>Taking the positive square root gives c = √225 = 15 cm.</li></ol>
+<p class="answer"><strong>15 cm</strong></p></div></details>
+</article><article class="pair" id="c1-q3" aria-label="Question 3 and matching practice">
+<div class="task original"><h4>Original 3 <span>· Test a right triangle</span></h4><p class="prompt">Do 7 m, 24 m, and 25 m form a right triangle? Show why.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 25 m, the longest side, as the candidate hypotenuse. The sketch labels that side across from the candidate right angle.</li><li>7² + 24² = 49 + 576 = 625, and 25² = 625.</li><li>The values match, so the converse of the Pythagorean theorem proves the triangle is right.</li></ol><figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A triangle sketch with sides 24 m, 7 m, and 25 m. The lighter marker indicates a candidate right angle to test." xmlns="http://www.w3.org/2000/svg"><path class="shape" d="M45 174H305V58Z"/><path class="dashed" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">24 m</text><text x="315" y="119" text-anchor="start">7 m</text><text class="hot" x="154" y="105" text-anchor="middle">25 m</text></svg><figcaption>The dashed marker shows the angle to test.</figcaption></figure>
+<p class="answer"><strong>Yes</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Do 8 m, 15 m, and 17 m form a right triangle? Show why.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 17 m as the candidate hypotenuse.</li><li>8² + 15² = 64 + 225 = 289, and 17² = 289.</li><li>The equality proves the triangle is right by the converse.</li></ol>
+<p class="answer"><strong>Yes</strong></p></div></details>
+</article><article class="pair" id="c1-q4" aria-label="Question 4 and matching practice">
+<div class="task original"><h4>Original 4 <span>· Screen diagonal</span></h4><p class="prompt">A tablet screen is 10 cm high and 24 cm wide. Find its diagonal.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Sketch a rectangle and connect two opposite corners. The 10 cm and 24 cm edges meet at 90°, and the diagonal d is the hypotenuse.</li><li>d² = 10² + 24² = 100 + 576 = 676.</li><li>d = √676 = 26 cm.</li></ol><figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A rectangle with perpendicular sides 24 cm and 10 cm. Its diagonal is labeled d." xmlns="http://www.w3.org/2000/svg"><path class="dashed" d="M45 174V58H305"/><path class="shape" d="M45 174H305V58Z"/><path class="marker" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">24 cm</text><text x="315" y="119" text-anchor="start">10 cm</text><text class="hot" x="154" y="105" text-anchor="middle">d</text></svg></figure>
+<p class="answer"><strong>26 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular display is 15 cm high and 20 cm wide. Find its corner-to-corner diagonal.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The two screen edges are perpendicular legs, so d² = 15² + 20² = 225 + 400 = 625.</li><li>The positive square root gives d = 25 cm.</li></ol>
+<p class="answer"><strong>25 cm</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-2" aria-labelledby="title-2" data-strand="Spatial Reasoning">
+<header><p class="chapter-kicker">Chapter 02 <span aria-hidden="true">/</span> Spatial Reasoning</p>
+<h2 id="title-2">Geometry vocabulary &amp; views</h2>
+<p class="source">Image 2 · Week 5 Assessment · Questions 1–10</p>
+<p class="goal">Name basic parts of solids and connect each straight-on view to its dimension pair.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Face, net, and congruent</h4><p>A face is one flat surface of a solid. A net is a flat arrangement of faces that folds into a solid. Congruent figures have exactly the same size and shape.</p></div><div><h4>Set the viewing direction</h4><p>Here, length runs left to right across the front, depth runs front to back, and height runs bottom to top. A straight-on view shows two of these directions.</p></div><div><h4>Choose two dimensions</h4><p>Top uses length × depth. Front uses length × height. Side uses depth × height. The missing dimension points along the viewing direction.</p></div></div>
+<figure class="diagram "><svg viewBox="0 20 342 246" role="img" aria-label="A rectangular box labeled length L, depth D, and height H, with top L by D, front L by H, and side D by H shown below." xmlns="http://www.w3.org/2000/svg"><g transform="translate(41 0)"><path class="face-front" d="M23 67H190V152H23Z"/><path class="face-top" d="M23 67l50-30h167l-50 30Z"/>
+<path class="face-side" d="M190 67l50-30v85l-50 30Z"/><text x="103" y="177" text-anchor="middle">L</text><text x="227" y="151">D</text><text x="2" y="116">H</text></g><rect class="face-top" x="23" y="196" width="88" height="35" rx="2"/><rect class="face-front" x="135" y="184" width="88" height="47" rx="2"/><rect class="face-side" x="252" y="184" width="64" height="47" rx="2"/><g text-anchor="middle"><text x="67" y="219">L × D</text><text x="179" y="213">L × H</text><text x="284" y="213">D × H</text><text class="figure-label" x="67" y="253">Top</text><text class="figure-label" x="179" y="253">Front</text><text class="figure-label" x="284" y="253">Side</text></g></svg><figcaption>A straight-on view keeps two dimensions of the box.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>For a box 9 in. long, 2 in. deep, and 4 in. high, the front view measures 9 in. × 4 in. Depth runs away from the viewer.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 2 questions"><span class="jump-label">Jump to question</span><a href="#c2-q1" aria-label="Question 1">1</a><a href="#c2-q2" aria-label="Question 2">2</a><a href="#c2-q3" aria-label="Question 3">3</a><a href="#c2-q4" aria-label="Question 4">4</a><a href="#c2-q5" aria-label="Question 5">5</a><a href="#c2-q6" aria-label="Question 6">6</a><a href="#c2-q7" aria-label="Question 7">7</a><a href="#c2-q8" aria-label="Question 8">8</a><a href="#c2-q9" aria-label="Question 9">9</a><a href="#c2-q10" aria-label="Question 10">10</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Week 5 Assessment</h3><p class="directions">Answer all 20 questions. Questions 1–10 are worth 1 point each. Questions 11–20 are worth 2 points each. Show your thinking when a question asks you to explain.</p><article class="pair" id="c2-q1" aria-label="Question 1 and matching practice">
+<div class="task original"><h4>Original 1</h4><p class="prompt">A flat pattern that folds into a three-dimensional object is called a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A net lays the faces out in one plane. Folding along the shared edges brings the faces together to form the solid.</p>
+<p class="answer"><strong>Net</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What is a flat, cut-out layout that folds into a cereal box called?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The cereal box is a rectangular prism. Its flat layout shows the faces joined along fold lines, which makes the layout a net.</p>
+<p class="answer"><strong>A net</strong></p></div></details>
+</article><article class="pair" id="c2-q2" aria-label="Question 2 and matching practice">
+<div class="task original"><h4>Original 2</h4><p class="prompt">A flat surface of a three-dimensional object is called a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A face is one flat surface. A box has a front face, a top face, and other faces. A net is the layout of the faces together.</p>
+<p class="answer"><strong>Face</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What is the flat rectangular surface on the front of a shoebox called?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The entire rectangle is one flat surface of the box, so it is one face.</p>
+<p class="answer"><strong>A face</strong></p></div></details>
+</article><article class="pair" id="c2-q3" aria-label="Question 3 and matching practice">
+<div class="task original"><h4>Original 3</h4><p class="prompt">The view seen from above is the <span class="blank">____</span> view.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A direct view from above is the top view. On a box, it shows the length and depth.</p>
+<p class="answer"><strong>Top</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A camera looks straight down on a picnic table. Which view is it recording?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The camera is directly above the object and points downward, so it records the top view.</p>
+<p class="answer"><strong>Top view</strong></p></div></details>
+</article><article class="pair" id="c2-q4" aria-label="Question 4 and matching practice">
+<div class="task original"><h4>Original 4</h4><p class="prompt">The view seen from directly in front is the <span class="blank">____</span> view.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A camera facing the front straight on gives the front view. The box extends away from the camera along its depth.</p>
+<p class="answer"><strong>Front</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A photographer stands squarely in front of a locker. Which view does the photo show?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The photographer looks straight at the front face. That direction defines the front view.</p>
+<p class="answer"><strong>Front view</strong></p></div></details>
+</article><article class="pair" id="c2-q5" aria-label="Question 5 and matching practice">
+<div class="task original"><h4>Original 5</h4><p class="prompt">The view seen from one side is the <span class="blank">____</span> view.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Looking straight from the left or right gives a side view. For the box convention here, it shows depth and height.</p>
+<p class="answer"><strong>Side</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A camera faces the right side of a building straight on. What view does it show?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">It is beside the building and faces the right side. This is a side view, specifically the right-side view.</p>
+<p class="answer"><strong>Right-side view</strong></p></div></details>
+</article><article class="pair" id="c2-q6" aria-label="Question 6 and matching practice">
+<div class="task original"><h4>Original 6</h4><p class="prompt">Figures with exactly the same size and shape are <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Congruent figures fit exactly when one is moved, turned, or flipped to line up with the other.</p>
+<p class="answer"><strong>Congruent</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Two 4 in. by 6 in. rectangles are turned in different directions. What word describes their relationship?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Rotate one rectangle until its 4 in. and 6 in. sides line up with the matching sides of the other. They have the same size and shape.</p>
+<p class="answer"><strong>Congruent</strong></p></div></details>
+</article><article class="pair" id="c2-q7" aria-label="Question 7 and matching practice">
+<div class="task original"><h4>Original 7</h4><p class="prompt">Which dimension pair makes the top view? Circle one.</p><ul class="choices unlettered"><li>length × depth</li><li>length × height</li><li>depth × height</li></ul></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Looking down shows the box’s two horizontal directions, length and depth. Height runs along the viewing direction.</p>
+<p class="answer"><strong>Length × depth</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box is 11 in. long, 4 in. deep, and 7 in. high. Which two dimensions appear in its top view?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The view from above uses length × depth. Substitute the named measurements to get 11 in. × 4 in.</p>
+<p class="answer"><strong>11 in. × 4 in.</strong></p></div></details>
+</article><article class="pair" id="c2-q8" aria-label="Question 8 and matching practice">
+<div class="task original"><h4>Original 8</h4><p class="prompt">Which dimension pair makes the front view? Circle one.</p><ul class="choices unlettered"><li>length × depth</li><li>length × height</li><li>depth × height</li></ul></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">From straight ahead, length runs across the view and height runs up and down. Depth extends away from the viewer.</p>
+<p class="answer"><strong>Length × height</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box is 13 cm long, 6 cm deep, and 8 cm high. Give the front-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The front view uses length and height, so pair 13 cm with 8 cm.</p>
+<p class="answer"><strong>13 cm × 8 cm</strong></p></div></details>
+</article><article class="pair" id="c2-q9" aria-label="Question 9 and matching practice">
+<div class="task original"><h4>Original 9</h4><p class="prompt">Which dimension pair makes the side view? Circle one.</p><ul class="choices unlettered"><li>length × depth</li><li>length × height</li><li>depth × height</li></ul></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">From the side, depth runs across the view and height runs vertically. Length extends along the line of sight.</p>
+<p class="answer"><strong>Depth × height</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box is 9 cm long, 5 cm deep, and 2 cm high. Give the side-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Pick depth and height for the side view. The measurements are 5 cm and 2 cm.</p>
+<p class="answer"><strong>5 cm × 2 cm</strong></p></div></details>
+</article><article class="pair" id="c2-q10" aria-label="Question 10 and matching practice">
+<div class="task original"><h4>Original 10</h4><p class="prompt">How many faces does a cube have?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Count the top and bottom, the front and back, and the left and right. Three pairs make six faces.</p>
+<p class="answer"><strong>6 faces</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">How many square faces are on a cube-shaped die? Name the opposite pairs.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The three opposite pairs are top and bottom, front and back, and left and right. Each pair contributes two square faces.</p>
+<p class="answer"><strong>6 square faces</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-3" aria-labelledby="title-3" data-strand="Spatial Reasoning">
+<header><p class="chapter-kicker">Chapter 03 <span aria-hidden="true">/</span> Spatial Reasoning</p>
+<h2 id="title-3">Reconstructing a 3D box</h2>
+<p class="source">Image 3 · Week 5 Assessment · Questions 11–20</p>
+<p class="goal">Use two views to recover the third, explain cube nets, and match corresponding triangle parts.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Track the shared dimension</h4><p>Top and front share length. Front and side share height. Top and side share depth. Label each measurement before combining two views.</p></div><div><h4>Test the net</h4><p>A cube net needs six congruent squares. Fold along shared edges and check that each square lands on a different face of one closed cube.</p></div><div><h4>Match triangles</h4><p>The Side–Side–Side rule (SSS) proves congruence from three matching side lengths. In a congruence statement, read the vertex letters in order to match sides and angles.</p></div></div>
+<figure class="diagram "><svg viewBox="0 20 342 246" role="img" aria-label="A rectangular box labeled length L, depth D, and height H, with top L by D, front L by H, and side D by H shown below." xmlns="http://www.w3.org/2000/svg"><g transform="translate(41 0)"><path class="face-front" d="M23 67H190V152H23Z"/><path class="face-top" d="M23 67l50-30h167l-50 30Z"/>
+<path class="face-side" d="M190 67l50-30v85l-50 30Z"/><text x="103" y="177" text-anchor="middle">L</text><text x="227" y="151">D</text><text x="2" y="116">H</text></g><rect class="face-top" x="23" y="196" width="88" height="35" rx="2"/><rect class="face-front" x="135" y="184" width="88" height="47" rx="2"/><rect class="face-side" x="252" y="184" width="64" height="47" rx="2"/><g text-anchor="middle"><text x="67" y="219">L × D</text><text x="179" y="213">L × H</text><text x="284" y="213">D × H</text><text class="figure-label" x="67" y="253">Top</text><text class="figure-label" x="179" y="253">Front</text><text class="figure-label" x="284" y="253">Side</text></g></svg><figcaption>A straight-on view keeps two dimensions of the box.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>A 9 cm × 4 cm front view and a 3 cm × 4 cm side view share the 4 cm height. The top uses the 9 cm length and 3 cm depth.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 3 questions"><span class="jump-label">Jump to question</span><a href="#c3-q11" aria-label="Question 11">11</a><a href="#c3-q12" aria-label="Question 12">12</a><a href="#c3-q13" aria-label="Question 13">13</a><a href="#c3-q14" aria-label="Question 14">14</a><a href="#c3-q15" aria-label="Question 15">15</a><a href="#c3-q16" aria-label="Question 16">16</a><a href="#c3-q17" aria-label="Question 17">17</a><a href="#c3-q18" aria-label="Question 18">18</a><a href="#c3-q19" aria-label="Question 19">19</a><a href="#c3-q20" aria-label="Question 20">20</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Week 5 Assessment · Continued</h3><p class="directions" id="c3-shared-box">For questions 11–13: Box dimension: length = 8 cm, depth = 3 cm, height = 5 cm.</p><article class="pair" id="c3-q11" aria-label="Question 11 and matching practice">
+<div class="task original"><h4>Original 11</h4><p class="prompt">Give the dimensions of the top view.</p><a class="reference" href="#c3-shared-box">Shared box dimensions ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Top view uses length × depth. The shared box has length 8 cm and depth 3 cm.</p>
+<p class="answer"><strong>8 cm × 3 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A package is 11 cm long, 4 cm deep, and 6 cm high. Give its top-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">A view from above shows length and depth. Use 11 cm and 4 cm for the two sides of the top rectangle.</p>
+<p class="answer"><strong>11 cm × 4 cm</strong></p></div></details>
+</article><article class="pair" id="c3-q12" aria-label="Question 12 and matching practice">
+<div class="task original"><h4>Original 12</h4><p class="prompt">Give the dimensions of the front view.</p><a class="reference" href="#c3-shared-box">Shared box dimensions ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Front view uses length × height. For the shared box, those dimensions are 8 cm and 5 cm.</p>
+<p class="answer"><strong>8 cm × 5 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A bin is 14 in. long, 5 in. deep, and 9 in. high. Give its front-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Select length and height from the three measurements. The front face is 14 in. across and 9 in. high.</p>
+<p class="answer"><strong>14 in. × 9 in.</strong></p></div></details>
+</article><article class="pair" id="c3-q13" aria-label="Question 13 and matching practice">
+<div class="task original"><h4>Original 13</h4><p class="prompt">Give the dimensions of the side view.</p><a class="reference" href="#c3-shared-box">Shared box dimensions ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Side view uses depth × height. For the shared box, those dimensions are 3 cm and 5 cm.</p>
+<p class="answer"><strong>3 cm × 5 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A carton is 12 cm long, 7 cm deep, and 4 cm high. Give its side-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The side face runs front to back and bottom to top. Those dimensions are the 7 cm depth and the 4 cm height.</p>
+<p class="answer"><strong>7 cm × 4 cm</strong></p></div></details>
+</article><article class="pair" id="c3-q14" aria-label="Question 14 and matching practice">
+<div class="task original"><h4>Original 14</h4><p class="prompt">A box has length 12 cm, depth 4 cm, and height 7 cm. Give the top-view and front-view dimensions.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The top keeps length and depth, so it measures 12 cm × 4 cm.</li><li>The front keeps length and height, so it measures 12 cm × 7 cm. The views share the 12 cm length.</li></ol>
+<p class="answer"><strong>Top 12 cm × 4 cm · Front 12 cm × 7 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box is 16 cm long, 5 cm deep, and 9 cm high. Give the top-view and front-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Pair length with depth to get a top view of 16 cm × 5 cm.</li><li>Pair that same length with height to get a front view of 16 cm × 9 cm.</li></ol>
+<p class="answer"><strong>Top 16 cm × 5 cm · Front 16 cm × 9 cm</strong></p></div></details>
+</article><article class="pair" id="c3-q15" aria-label="Question 15 and matching practice">
+<div class="task original"><h4>Original 15</h4><p class="prompt">A box has length 10 cm, depth 6 cm, and height 9 cm. Give the side-view dimensions. Which measurement is hidden from the side?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The side view is depth × height, or 6 cm × 9 cm.</li><li>Length runs in the direction of sight from the side, so the 10 cm length does not appear in that view.</li></ol>
+<p class="answer"><strong>6 cm × 9 cm · The 10 cm length is hidden</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box has length 18 in., depth 8 in., and height 11 in. Give the side-view dimensions and name the hidden measurement.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>From the side, the visible axes are depth and height. Use 8 in. × 11 in.</li><li>The 18 in. length is along the viewing direction, so it is hidden.</li></ol>
+<p class="answer"><strong>8 in. × 11 in. · The 18 in. length is hidden</strong></p></div></details>
+</article><article class="pair" id="c3-q16" aria-label="Question 16 and matching practice">
+<div class="task original"><h4>Original 16</h4><p class="prompt">A box has a top view of 14 cm × 5 cm and a front view of 14 cm × 8 cm. Give the side-view dimensions.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The top uses length × depth, so the depth is 5 cm. The front uses length × height, so the height is 8 cm.</li><li>Combine depth and height to get a side view of 5 cm × 8 cm.</li></ol>
+<p class="answer"><strong>5 cm × 8 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box has a 17 cm × 6 cm top view and a 17 cm × 10 cm front view. Find its side-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The common 17 cm is the length. The remaining top measurement, 6 cm, is the depth. The remaining front measurement, 10 cm, is the height.</li><li>Pair depth and height for the side.</li></ol>
+<p class="answer"><strong>6 cm × 10 cm</strong></p></div></details>
+</article><article class="pair" id="c3-q17" aria-label="Question 17 and matching practice">
+<div class="task original"><h4>Original 17</h4><p class="prompt">A rectangular prism has length 9 cm, depth 4 cm, and height 6 cm. A student says the top view is 9 cm × 6 cm. Is the student correct? Explain.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>A top view shows length and depth, so use 9 cm and 4 cm.</li><li>The proposed 9 cm × 6 cm uses the height and describes the front view.</li></ol>
+<p class="answer"><strong>No. The top view is 9 cm × 4 cm.</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A prism is 15 cm long, 7 cm deep, and 10 cm high. A student says its side view is 15 cm × 10 cm. Explain the error and give the correct dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The proposed pair uses length and height, the front view.</li><li>From the side, pair the 7 cm depth with the 10 cm height.</li></ol>
+<p class="answer"><strong>The side view is 7 cm × 10 cm.</strong></p></div></details>
+</article><article class="pair" id="c3-q18" aria-label="Question 18 and matching practice">
+<div class="task original"><h4>Original 18</h4><p class="prompt">A cube net is made from congruent squares. How many squares must it have, and what should happen when the net is folded?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Each square becomes one of the cube’s six faces.</li><li>When folded, the pieces must cover six different faces and close along the edges, with no overlap or gaps.</li></ol>
+<p class="answer"><strong>6 squares that fold into a closed cube without overlap</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A student draws six equal squares in a straight row. Does the count alone prove it is a cube net? Explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>A cube needs six squares, but their positions also determine where they land.</li><li>When you fold a straight row around a cube’s sides, only four distinct face directions fit around the belt. Continuing the row repeats a face direction, so it cannot close as a cube.</li></ol>
+<p class="answer"><strong>No</strong></p></div></details>
+</article><article class="pair" id="c3-q19" aria-label="Question 19 and matching practice">
+<div class="task original"><h4>Original 19</h4><p class="prompt">Triangle A has side lengths 5 cm, 5 cm, and 6 cm. Triangle B has side lengths 5 cm, 6 cm, and 5 cm. Are the triangles congruent? Explain your answer.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Each triangle’s lengths in ascending order are 5, 5, and 6. All three corresponding side lengths match.</li><li>The Side–Side–Side congruence rule guarantees the same size and shape.</li></ol>
+<p class="answer"><strong>Yes, by SSS</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">One triangle has side lengths 8 cm, 6 cm, and 8 cm. Another has sides 8 cm, 8 cm, and 6 cm. Are they congruent? Explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Match the two 8 cm sides and the 6 cm side.</li><li>Three matching side lengths satisfy Side–Side–Side, so the triangles are congruent.</li></ol>
+<p class="answer"><strong>Yes, by SSS</strong></p></div></details>
+</article><article class="pair" id="c3-q20" aria-label="Question 20 and matching practice">
+<div class="task original"><h4>Original 20</h4><p class="prompt">△ABC ≅ △DEF. If BC = 9 cm, find EF. Then name the angle that corresponds to angle B.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The order pairs A with D, B with E, and C with F.</li><li>The endpoints of BC match E and F, so EF is 9 cm. The second vertex B matches E.</li></ol>
+<p class="answer"><strong>EF = 9 cm · ∠B ↔ ∠E</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">△JKL ≅ △MNP. If KL = 11 cm, find NP and name the angle that corresponds to ∠K.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The order gives J ↔ M, K ↔ N, and L ↔ P.</li><li>KL and NP have matching endpoints, so their lengths are equal. The middle letters give ∠K and ∠N.</li></ol>
+<p class="answer"><strong>NP = 11 cm · ∠K ↔ ∠N</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-4" aria-labelledby="title-4" data-strand="Spatial Reasoning">
+<header><p class="chapter-kicker">Chapter 04 <span aria-hidden="true">/</span> Spatial Reasoning</p>
+<h2 id="title-4">Faces, edges, nets &amp; views</h2>
+<p class="source">Image 4 · 3D Views, Nets, and Congruent Triangles · Practice Worksheet, Questions 1–16</p>
+<p class="goal">Describe a cube, read its views, and recognize what makes a valid net.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Describe a solid</h4><p>A face is a flat surface, an edge is a segment where two faces meet, and a vertex is a corner. Count a cube’s 12 edges as 4 on top, 4 on the bottom, and 4 connecting edges.</p></div><div><h4>Compare the views</h4><p>A cube looks square from directly above, in front, or beside it. A rectangular box follows the pairs top = length × depth, front = length × height, and side = depth × height.</p></div><div><h4>Fold the faces</h4><p>A cube has six congruent square faces. In a valid net, connected squares fold along their shared edges to cover all six faces without overlaps or gaps.</p></div></div>
+<figure class="diagram "><svg viewBox="10 5 330 191" role="img" aria-label="A valid cube net. Four squares make a horizontal row, with one square above and one below the second square." xmlns="http://www.w3.org/2000/svg"><rect class="face-side" x="65" y="73" width="55" height="55"/><rect class="face-front" x="120" y="73" width="55" height="55"/><rect class="face-side" x="175" y="73" width="55" height="55"/><rect class="face-front" x="230" y="73" width="55" height="55"/><rect class="face-top" x="120" y="18" width="55" height="55"/><rect class="face-top" x="120" y="128" width="55" height="55"/><path class="dashed" d="M120 73h55m0 55h-55m0-55v55m55 0V73m55 0v55"/></svg><figcaption>This net has six congruent faces. The dashed edges are fold lines.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>Four squares in a row can wrap around the sides. In the diagram, the squares above and below the second square close the top and bottom.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 4 questions"><span class="jump-label">Jump to question</span><a href="#c4-q1" aria-label="Question 1">1</a><a href="#c4-q2" aria-label="Question 2">2</a><a href="#c4-q3" aria-label="Question 3">3</a><a href="#c4-q4" aria-label="Question 4">4</a><a href="#c4-q5" aria-label="Question 5">5</a><a href="#c4-q6" aria-label="Question 6">6</a><a href="#c4-q7" aria-label="Question 7">7</a><a href="#c4-q8" aria-label="Question 8">8</a><a href="#c4-q9" aria-label="Question 9">9</a><a href="#c4-q10" aria-label="Question 10">10</a><a href="#c4-q11" aria-label="Question 11">11</a><a href="#c4-q12" aria-label="Question 12">12</a><a href="#c4-q13" aria-label="Question 13">13</a><a href="#c4-q14" aria-label="Question 14">14</a><a href="#c4-q15" aria-label="Question 15">15</a><a href="#c4-q16" aria-label="Question 16">16</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">A. Vocabulary</h3><p class="directions">Use the word bank. Write the best word on each line. Each word is used once.</p><p class="wordbank"><strong>Word bank</strong> &nbsp; view · face · edge · vertex · net · congruent</p><article class="pair" id="c4-q1" aria-label="Question 1 and matching practice">
+<div class="task original"><h4>Original 1</h4><p class="prompt">A flat surface of a 3D object is a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A face is a single flat surface. The top square of a cube is one example.</p>
+<p class="answer"><strong>Face</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What is the flat triangular surface at the end of a triangular prism called?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The triangle is a complete flat surface, so it is a face. Faces can have different shapes on the same solid.</p>
+<p class="answer"><strong>A face</strong></p></div></details>
+</article><article class="pair" id="c4-q2" aria-label="Question 2 and matching practice">
+<div class="task original"><h4>Original 2</h4><p class="prompt">A line segment where two faces meet is an <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Two neighboring faces intersect along a straight segment. That segment is an edge.</p>
+<p class="answer"><strong>Edge</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What is the line segment shared by the top and front faces of a cube called?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The two flat faces meet along the length of one segment. Their shared segment is an edge.</p>
+<p class="answer"><strong>An edge</strong></p></div></details>
+</article><article class="pair" id="c4-q3" aria-label="Question 3 and matching practice">
+<div class="task original"><h4>Original 3</h4><p class="prompt">A corner where edges meet is a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A vertex is the point where edges meet. The plural is vertices.</p>
+<p class="answer"><strong>Vertex</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What is the point at a corner of a box, where three edges meet, called?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Those edges share a single endpoint. The point is a vertex of the box.</p>
+<p class="answer"><strong>A vertex</strong></p></div></details>
+</article><article class="pair" id="c4-q4" aria-label="Question 4 and matching practice">
+<div class="task original"><h4>Original 4</h4><p class="prompt">A flat pattern that can be folded into a 3D object is a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A net shows connected faces lying flat. Folding along shared edges forms the solid.</p>
+<p class="answer"><strong>Net</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A strip of connected polygons folds into a paper model of a triangular prism. What is the unfolded pattern called?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The connected polygons represent the prism’s faces laid out for folding. This two-dimensional pattern is a net.</p>
+<p class="answer"><strong>A net</strong></p></div></details>
+</article><article class="pair" id="c4-q5" aria-label="Question 5 and matching practice">
+<div class="task original"><h4>Original 5</h4><p class="prompt">A picture of an object from one direction is called a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A view shows what the object looks like from a chosen direction, such as directly above.</p>
+<p class="answer"><strong>View</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">An architect draws only what you can see straight in front of a building. What is this kind of drawing called?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The drawing records one line of sight. Facing the front identifies it as a front view.</p>
+<p class="answer"><strong>A view, specifically a front view</strong></p></div></details>
+</article><article class="pair" id="c4-q6" aria-label="Question 6 and matching practice">
+<div class="task original"><h4>Original 6</h4><p class="prompt">Figures with exactly the same shape and size are <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">If one figure can be moved, rotated, or reflected to fit exactly over the other, the two figures are congruent.</p>
+<p class="answer"><strong>Congruent</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Two equilateral triangles both have 5 cm sides. One points up and the other down. Are they congruent?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Their three corresponding sides have equal lengths. Rotating one triangle can make the shapes line up exactly.</p>
+<p class="answer"><strong>Yes</strong></p></div></details>
+</article><h3 class="set-title">B. Top, Front, and Side Views</h3><p class="directions">Circle the best answer or write the requested dimensions.</p><article class="pair" id="c4-q7" aria-label="Question 7 and matching practice">
+<div class="task original"><h4>Original 7</h4><p class="prompt">Where is the camera for a top view?</p><ol class="choices" type="A"><li>Above the object</li><li>In front</li><li>Beside it</li><li>Under it</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">For the top view, aim straight down at the top of the object.</p>
+<p class="answer"><strong>A. Above the object</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Where should a drone hover to capture a top view of a rectangular swimming pool?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">A top view faces the pool surface from above. Pointing the camera straight down shows the pool’s footprint.</p>
+<p class="answer"><strong>Directly above the pool</strong></p></div></details>
+</article><article class="pair" id="c4-q8" aria-label="Question 8 and matching practice">
+<div class="task original"><h4>Original 8</h4><p class="prompt">Where is the camera for a front view?</p><ol class="choices" type="A"><li>Above the object</li><li>Directly in front</li><li>Beside it</li><li>Under it</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The front view is a straight-on look at the front face, with the camera directly in front.</p>
+<p class="answer"><strong>B. Directly in front</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Where should a camera be placed to record a front view of a bookcase?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The camera points straight at the shelves from the front. This shows how wide and tall the bookcase is in that view.</p>
+<p class="answer"><strong>Directly in front of the bookcase</strong></p></div></details>
+</article><article class="pair" id="c4-q9" aria-label="Question 9 and matching practice">
+<div class="task original"><h4>Original 9</h4><p class="prompt">Where is the camera for a side view?</p><ol class="choices" type="A"><li>Above the object</li><li>In front</li><li>Beside the object</li><li>Inside it</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">For a side view, face the object straight on from either its left or its right.</p>
+<p class="answer"><strong>C. Beside the object</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Where would you stand to sketch a left-side view of a cabinet?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Stand on the left and look straight at that side. The depth and height show in the resulting view.</p>
+<p class="answer"><strong>Beside its left side</strong></p></div></details>
+</article><article class="pair" id="c4-q10" aria-label="Question 10 and matching practice">
+<div class="task original"><h4>Original 10</h4><p class="prompt">What 2D shape is seen when a cube is viewed from the top?</p><ol class="choices" type="A"><li>Circle</li><li>Triangle</li><li>Square</li><li>Pentagon</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A cube’s top face has four equal sides and four right angles. Looking straight down gives its square outline.</p>
+<p class="answer"><strong>C. Square</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What 2D shape appears when you look directly at the front face of a cube? Explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Every face of a cube is a square. The front view looks straight at one face, so its outline is a square.</p>
+<p class="answer"><strong>A square</strong></p></div></details>
+</article><article class="pair" id="c4-q11" aria-label="Question 11 and matching practice">
+<div class="task original"><h4>Original 11</h4><p class="prompt">A rectangular box is 8 cm long, 3 cm deep, and 5 cm high. Write the dimensions of its top view.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The top view uses the 8 cm length and 3 cm depth. Give the two dimensions together as 8 cm × 3 cm.</p>
+<p class="answer"><strong>8 cm × 3 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular box is 9 in. long, 4 in. deep, and 6 in. high. Write its top-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Looking from above shows the 9 in. length and 4 in. depth. Pair them as length × depth.</p>
+<p class="answer"><strong>9 in. × 4 in.</strong></p></div></details>
+</article><article class="pair" id="c4-q12" aria-label="Question 12 and matching practice">
+<div class="task original"><h4>Original 12</h4><p class="prompt">Using the same box, write the dimensions of its front view.</p><a class="reference" href="#c4-q11">Box dimensions in Question 11 ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Use the length and height listed in Question 11. The front rectangle is 8 cm across and 5 cm high.</p>
+<p class="answer"><strong>8 cm × 5 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box is 15 cm long, 4 cm deep, and 8 cm high. Write the front-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The view from straight ahead shows the 15 cm length and 8 cm height.</p>
+<p class="answer"><strong>15 cm × 8 cm</strong></p></div></details>
+</article><article class="pair" id="c4-q13" aria-label="Question 13 and matching practice">
+<div class="task original"><h4>Original 13</h4><p class="prompt">Using the same box, write the dimensions of its side view.</p><a class="reference" href="#c4-q11">Box dimensions in Question 11 ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Use the depth and height listed in Question 11. The side rectangle extends 3 cm front to back and 5 cm upward.</p>
+<p class="answer"><strong>3 cm × 5 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box is 20 cm long, 8 cm deep, and 12 cm high. Write its side-view dimensions.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The side view uses depth × height. Select 8 cm and 12 cm.</p>
+<p class="answer"><strong>8 cm × 12 cm</strong></p></div></details>
+</article><h3 class="set-title">C. Faces, Edges, and Nets</h3><p class="directions">Answer each question.</p><article class="pair" id="c4-q14" aria-label="Question 14 and matching practice">
+<div class="task original"><h4>Original 14</h4><p class="prompt">How many faces, edges, and vertices does a cube have?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The cube has three opposite pairs of faces.</li><li>Count 4 edges on top, 4 on the bottom, and 4 connecting them, for a total of 12.</li><li>Count 4 top corners and 4 bottom corners to get 8 vertices.</li></ol>
+<p class="answer"><strong>6 faces · 12 edges · 8 vertices</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular shipping carton is longer than it is tall. How many faces, edges, and vertices does it have?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">It remains a rectangular prism. Count three opposite pairs of faces, then 4 top, 4 bottom, and 4 connecting edges. Its top and bottom each have four corners.</p>
+<p class="answer"><strong>6 faces · 12 edges · 8 vertices</strong></p></div></details>
+</article><article class="pair" id="c4-q15" aria-label="Question 15 and matching practice">
+<div class="task original"><h4>Original 15</h4><p class="prompt">How many congruent squares are in a cube net?</p><ol class="choices" type="A"><li>4</li><li>5</li><li>6</li><li>8</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A cube has six square faces of equal size. A cube net uses one congruent square per face.</p>
+<p class="answer"><strong>C. 6</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A proposed cube net has five congruent squares. How many more squares are needed for the full set of faces?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">A cube has six faces, so 6 − 5 = 1 more square is needed. Its placement must also allow the net to fold correctly.</p>
+<p class="answer"><strong>1 more square</strong></p></div></details>
+</article><article class="pair" id="c4-q16" aria-label="Question 16 and matching practice">
+<div class="task original"><h4>Original 16</h4><p class="prompt">What must happen when a correct net is folded?</p><ol class="choices" type="A"><li>Faces overlap</li><li>It forms the 3D object</li><li>Edges curve</li><li>It stays flat</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A correct net folds so its faces fill the surface of the intended solid. The face interiors stay separate and matching edges meet.</p>
+<p class="answer"><strong>B. It forms the 3D object</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">When a proposed cube net is folded, two squares land on the same face. Can it form a complete cube? Explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Two pieces cover one face, leaving another face uncovered. A successful net covers all six faces exactly once.</p>
+<p class="answer"><strong>No</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-5" aria-labelledby="title-5" data-strand="Geometry">
+<header><p class="chapter-kicker">Chapter 05 <span aria-hidden="true">/</span> Geometry</p>
+<h2 id="title-5">Congruent triangles</h2>
+<p class="source">Image 5 · 3D Views, Nets, and Congruent Triangles · Practice Worksheet, Questions 17–20</p>
+<p class="goal">Use vertex order to identify matching sides and angles and solve a mixed geometry challenge.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Recognize congruence</h4><p>Congruent triangles have the same size and shape. A slide, turn, or flip preserves all side lengths and angle measures.</p></div><div><h4>Read each position</h4><p>In △JKL ≅ △MNP, J matches M, K matches N, and L matches P. To match a side, map both of its endpoints.</p></div><div><h4>Keep the dimensions straight</h4><p>In a box, front is length × height and side is depth × height. Combine the length from the front and the depth from the side to get the top view.</p></div></div>
+<figure class="diagram "><svg viewBox="0 24 360 166" role="img" aria-label="Congruent triangles JKL and MNP. The second is a reflection of the first. J matches M, K matches N, and L matches P." xmlns="http://www.w3.org/2000/svg"><path class="face-top" d="M24 149L120 149L81 65Z"/><path class="face-front" d="M334 149L238 149L277 65Z"/><path class="marker" d="M63 143v12m232-12v12"/><g text-anchor="middle"><text x="20" y="172">J</text><text x="125" y="172">K</text><text x="81" y="54">L</text><text x="338" y="172">M</text><text x="233" y="172">N</text><text x="277" y="54">P</text><text class="hot" x="179" y="116">≅</text></g></svg><figcaption>The matching tick marks show that JK and MN have the same length.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>If JL = 12 cm and ∠L = 42° in the diagram’s congruence statement, then MP = 12 cm and ∠P = 42°.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 5 questions"><span class="jump-label">Jump to question</span><a href="#c5-q17" aria-label="Question 17">17</a><a href="#c5-q18" aria-label="Question 18">18</a><a href="#c5-q19" aria-label="Question 19">19</a><a href="#c5-q20" aria-label="Question 20">20</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">D. Congruent Triangles</h3><p class="directions">Remember: corresponding parts are parts in matching positions.</p><article class="pair" id="c5-q17" aria-label="Question 17 and matching practice">
+<div class="task original"><h4>Original 17</h4><p class="prompt">Which statement is true about congruent triangles?</p><ol class="choices" type="A"><li>Only the areas match</li><li>All corresponding sides and angles match</li><li>They must face the same way</li><li>Only one side matches</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Congruent triangles can be aligned exactly. That alignment matches all three sides and all three angles. A rotation or reflection still preserves those measures.</p>
+<p class="answer"><strong>B. All corresponding sides and angles match</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A triangle is flipped to make its mirror image. Are the original and the image congruent? Explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">A reflection preserves every side length and angle measure. Matching parts on the two triangles are equal, so the triangles are congruent.</p>
+<p class="answer"><strong>Yes</strong></p></div></details>
+</article><article class="pair" id="c5-q18" aria-label="Question 18 and matching practice">
+<div class="task original"><h4>Original 18</h4><p class="prompt">Triangle ABC is congruent to triangle DEF. Which side corresponds to side AB?</p><ol class="choices" type="A"><li>DE</li><li>EF</li><li>DF</li><li>BC</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The first two positions pair A with D and B with E. Those endpoint matches give AB ↔ DE.</p>
+<p class="answer"><strong>A. DE</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">If △RST ≅ △WXY, which side corresponds to ST?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Second letters match, S ↔ X, and third letters match, T ↔ Y. Join X and Y to get XY.</p>
+<p class="answer"><strong>XY</strong></p></div></details>
+</article><h3 class="set-title">E. Challenge</h3><p class="directions">Show your thinking. These questions combine more than one idea.</p><article class="pair" id="c5-q19" aria-label="Question 19 and matching practice">
+<div class="task original"><h4>Original 19</h4><p class="prompt">A box has a front view measuring 10 cm by 4 cm and a side view measuring 6 cm by 4 cm. What are the dimensions of its top view? Explain how you know.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The front shows the 10 cm length and 4 cm height. The side shows the 6 cm depth and the same height.</li><li>The top uses length × depth, so it is 10 cm × 6 cm.</li></ol>
+<p class="answer"><strong>10 cm × 6 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box has a 12 in. × 5 in. front view and an 8 in. × 5 in. side view. Find the top-view dimensions and explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The shared 5 in. dimension is the height. The front gives the length of 12 in. and the side gives the depth of 8 in.</li><li>Combine length and depth to obtain the top view.</li></ol>
+<p class="answer"><strong>12 in. × 8 in.</strong></p></div></details>
+</article><article class="pair" id="c5-q20" aria-label="Question 20 and matching practice">
+<div class="task original"><h4>Original 20</h4><p class="prompt">Triangle ABC is congruent to triangle DEF. AB = 7 cm, BC = 9 cm, and angle B = 52°. Find DE, EF, and angle E.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Pair A with D, B with E, and C with F.</li><li>AB matches DE and BC matches EF, so their lengths are 7 cm and 9 cm, respectively.</li><li>Since B matches E, ∠E measures 52°.</li></ol>
+<p class="answer"><strong>DE = 7 cm · EF = 9 cm · ∠E = 52°</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">△PQR ≅ △LMN. PQ = 10 cm, QR = 12 cm, and ∠Q = 64°. Find LM, MN, and ∠M.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>P ↔ L, Q ↔ M, and R ↔ N.</li><li>The endpoint pairs give PQ ↔ LM and QR ↔ MN. Transfer the side lengths, then transfer ∠Q’s 64° to ∠M.</li></ol>
+<p class="answer"><strong>LM = 10 cm · MN = 12 cm · ∠M = 64°</strong></p></div></details>
+</article><p class="directions"><strong>Worksheet check</strong> &nbsp; Did you answer all 20 questions across Chapters 4 and 5?</p></section>
+<section class="chapter" id="chapter-6" aria-labelledby="title-6" data-strand="Spatial Reasoning">
+<header><p class="chapter-kicker">Chapter 06 <span aria-hidden="true">/</span> Spatial Reasoning</p>
+<h2 id="title-6">Drawing and reading solids</h2>
+<p class="source">Image 6 · Bell ringer · 3D Views, Nets, and Congruence</p>
+<p class="goal">Read a box from different directions and use accurate language to describe a solid.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Aim straight at the face</h4><p>Imagine a camera above, in front, or beside the box. For each view, aim straight at that face. The visible pairs are length × depth, length × height, and depth × height, respectively.</p></div><div><h4>Count in layers</h4><p>A cube has 6 faces. Its top and bottom each have 4 vertices and 4 edges. Four more edges connect the layers, giving 8 vertices and 12 edges in all.</p></div><div><h4>Unfold or compare</h4><p>A net shows connected faces in a flat pattern. A cube net uses congruent squares, so each square has the same shape and size.</p></div></div>
+<figure class="diagram "><svg viewBox="0 20 342 246" role="img" aria-label="A rectangular box labeled length L, depth D, and height H, with top L by D, front L by H, and side D by H shown below." xmlns="http://www.w3.org/2000/svg"><g transform="translate(41 0)"><path class="face-front" d="M23 67H190V152H23Z"/><path class="face-top" d="M23 67l50-30h167l-50 30Z"/>
+<path class="face-side" d="M190 67l50-30v85l-50 30Z"/><text x="103" y="177" text-anchor="middle">L</text><text x="227" y="151">D</text><text x="2" y="116">H</text></g><rect class="face-top" x="23" y="196" width="88" height="35" rx="2"/><rect class="face-front" x="135" y="184" width="88" height="47" rx="2"/><rect class="face-side" x="252" y="184" width="64" height="47" rx="2"/><g text-anchor="middle"><text x="67" y="219">L × D</text><text x="179" y="213">L × H</text><text x="284" y="213">D × H</text><text class="figure-label" x="67" y="253">Top</text><text class="figure-label" x="179" y="253">Front</text><text class="figure-label" x="284" y="253">Side</text></g></svg><figcaption>A straight-on view keeps two dimensions of the box.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>For a box 6 cm long, 2 cm deep, and 4 cm high, its top view is 6 cm × 2 cm and its front view is 6 cm × 4 cm.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 6 questions"><span class="jump-label">Jump to question</span><a href="#c6-q1" aria-label="Question 1">1</a><a href="#c6-q2" aria-label="Question 2">2</a><a href="#c6-q3" aria-label="Question 3">3</a><a href="#c6-q4" aria-label="Question 4">4</a><a href="#c6-q5" aria-label="Question 5">5</a><a href="#c6-q6" aria-label="Question 6">6</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Bell ringer</h3><article class="pair" id="c6-q1" aria-label="Question 1 and matching practice">
+<div class="task original"><h4>Original 1</h4><p class="prompt">Where is the camera for a top view for the box?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The top view looks straight down toward the box’s top face.</p>
+<p class="answer"><strong>Directly above the box</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Where should the camera be for a side view of the box?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Aim the camera straight at either side face. The line of sight runs along the length of the box.</p>
+<p class="answer"><strong>Directly beside the box</strong></p></div></details>
+</article><p class="directions" id="c6-box">Box dimensions: L = 8 cm, D = 3 cm, H = 5 cm.</p><article class="pair" id="c6-q2" aria-label="Question 2 and matching practice">
+<div class="task original"><h4>Original 2</h4><p class="prompt">What are its top-view dimensions of the box?</p><a class="reference" href="#c6-box">Box dimensions ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The given length is 8 cm and the depth is 3 cm. Together, they form the top face’s two dimensions.</p>
+<p class="answer"><strong>8 cm × 3 cm</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A box is 10 cm long, 4 cm deep, and 7 cm high. What are its top-view dimensions?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">From above, the visible directions are length and depth. Use the 10 cm and 4 cm measures.</p>
+<p class="answer"><strong>10 cm × 4 cm</strong></p></div></details>
+</article><article class="pair" id="c6-q3" aria-label="Question 3 and matching practice">
+<div class="task original"><h4>Original 3</h4><p class="prompt">How many faces, edges, and vertices does a cube have?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Count the three pairs of faces.</li><li>The top and bottom have four edges each, plus four vertical joining edges.</li><li>Each of those two faces has four distinct corners.</li></ol>
+<p class="answer"><strong>6 faces · 12 edges · 8 vertices</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">How many vertices and vertical edges does a cube have when it sits flat on a face?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">There are 4 corners on top and 4 on the bottom. Four upright edges connect the matching corners from top to bottom.</p>
+<p class="answer"><strong>8 vertices · 4 vertical edges</strong></p></div></details>
+</article><article class="pair" id="c6-q4" aria-label="Question 4 and matching practice">
+<div class="task original"><h4>Original 4</h4><p class="prompt">What is a net?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Think of cutting along selected edges of a paper box and opening it flat. The connected faces can be folded back along their shared edges.</p>
+<p class="answer"><strong>A flat pattern of faces that folds into a 3D object</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What would you call the connected layout left after a cardboard box is cut along some edges and laid flat?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The layout contains the box’s faces in a single plane. It is a net if the faces can fold back into the box.</p>
+<p class="answer"><strong>A net</strong></p></div></details>
+</article><article class="pair" id="c6-q5" aria-label="Question 5 and matching practice">
+<div class="task original"><h4>Original 5</h4><p class="prompt">What does congruent mean?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">One figure can be slid, turned, or flipped to line up exactly with the other. Matching lengths and angles are preserved.</p>
+<p class="answer"><strong>Exactly the same size and shape</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Two squares have side lengths 4 cm and 6 cm. Are they congruent? Explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Both figures are squares, but their side lengths differ. A slide, turn, or flip preserves length, so the figures cannot line up exactly.</p>
+<p class="answer"><strong>No</strong></p></div></details>
+</article><article class="pair" id="c6-q6" aria-label="Question 6 and matching practice">
+<div class="task original"><h4>Original 6</h4><p class="prompt">Which view uses length and height?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">From in front, the length runs across the picture and height runs vertically. The depth extends away from the viewer.</p>
+<p class="answer"><strong>Front view</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Which view uses depth and height? Explain using the camera direction.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">From beside a box, the camera sees its front-to-back extent and its vertical extent. Those are depth and height.</p>
+<p class="answer"><strong>Side view</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-7" aria-labelledby="title-7" data-strand="Geometry">
+<header><p class="chapter-kicker">Chapter 07 <span aria-hidden="true">/</span> Geometry</p>
+<h2 id="title-7">Squares, roots &amp; right triangles</h2>
+<p class="source">Image 7 · Pythagorean Relationship Core Practice · Questions 13–20</p>
+<p class="goal">Square numbers, take principal square roots, and test or calculate lengths.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Use inverse operations</h4><p>Squaring multiplies a number by itself. The principal square root reverses that operation for nonnegative numbers. For example, 7² = 49 and √49 = 7.</p></div><div><h4>Test the longest side</h4><p>Use the largest given side as c. Compare the sum of the two smaller squares to c². Equality proves that the sides make a right triangle.</p></div><div><h4>Draw a diagonal</h4><p>A rectangle’s diagonal joins opposite corners. It is the hypotenuse of a right triangle whose legs are the length and width of the rectangle.</p></div></div>
+<figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A rectangle with perpendicular sides length and width. Its diagonal is labeled d." xmlns="http://www.w3.org/2000/svg"><path class="dashed" d="M45 174V58H305"/><path class="shape" d="M45 174H305V58Z"/><path class="marker" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">length</text><text x="315" y="119" text-anchor="start">width</text><text class="hot" x="154" y="105" text-anchor="middle">d</text></svg><figcaption>The diagonal d is the hypotenuse of the shaded right triangle.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>Legs of 9 yd and 40 yd give a hypotenuse of √(81 + 1600) yd = 41 yd.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 7 questions"><span class="jump-label">Jump to question</span><a href="#c7-q13" aria-label="Question 13">13</a><a href="#c7-q14" aria-label="Question 14">14</a><a href="#c7-q15" aria-label="Question 15">15</a><a href="#c7-q16" aria-label="Question 16">16</a><a href="#c7-q17" aria-label="Question 17">17</a><a href="#c7-q18" aria-label="Question 18">18</a><a href="#c7-q19" aria-label="Question 19">19</a><a href="#c7-q20" aria-label="Question 20">20</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Squares and square roots</h3><article class="pair" id="c7-q13" aria-label="Question 13 and matching practice">
+<div class="task original"><h4>Original 13</h4><p class="prompt">3² = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The exponent 2 means multiply 3 by itself. So 3² = 3 × 3 = 9.</p>
+<p class="answer"><strong>9</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">6² = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Multiplying the base by itself gives 6 × 6 = 36.</p>
+<p class="answer"><strong>36</strong></p></div></details>
+</article><article class="pair" id="c7-q14" aria-label="Question 14 and matching practice">
+<div class="task original"><h4>Original 14</h4><p class="prompt">8² = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">8² means 8 × 8. The product is 64.</p>
+<p class="answer"><strong>64</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">9² = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The exponent 2 gives 9 × 9 = 81.</p>
+<p class="answer"><strong>81</strong></p></div></details>
+</article><article class="pair" id="c7-q15" aria-label="Question 15 and matching practice">
+<div class="task original"><h4>Original 15</h4><p class="prompt">√81 = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The radical asks for the nonnegative number whose square is 81. Since 9 × 9 = 81, the root is 9.</p>
+<p class="answer"><strong>9</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">√121 = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Find the nonnegative square root. Since 11² = 121, √121 = 11.</p>
+<p class="answer"><strong>11</strong></p></div></details>
+</article><article class="pair" id="c7-q16" aria-label="Question 16 and matching practice">
+<div class="task original"><h4>Original 16</h4><p class="prompt">√144 = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">12² = 12 × 12 = 144. The principal square root is 12.</p>
+<p class="answer"><strong>12</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">√169 = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Square 13 to check that 13 × 13 = 169. Therefore √169 = 13.</p>
+<p class="answer"><strong>13</strong></p></div></details>
+</article><h3 class="set-title">Test and apply</h3><div class="table-frame" id="c7-test-table"><table aria-label="Original test and apply worksheet table">
+<thead><tr><th scope="col">Side lengths</th><th scope="col">Show a² + b² and c²</th><th scope="col">Right triangle?</th></tr></thead>
+<tbody><tr><th scope="row">3, 4, 5</th><td>________________</td><td>Yes / No</td></tr>
+<tr><th scope="row">6, 7, 9</th><td>________________</td><td>Yes / No</td></tr></tbody></table></div><article class="pair" id="c7-q17" aria-label="Question 17 and matching practice">
+<div class="task original"><h4>Original 17</h4><p class="prompt">For 3, 4, 5, circle the longest side. Then complete the first row above.</p><a class="reference" href="#c7-test-table">Worksheet table ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 5 as c, the longest side.</li><li>The first row gets a² + b² = 3² + 4² = 25 and c² = 5² = 25.</li><li>Circle Yes because the values are equal.</li></ol>
+<p class="answer"><strong>5 is longest · Yes</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">For 5, 12, 13, identify the longest side, compare a² + b² and c², and decide whether the triangle is right.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Use c = 13. The other squares add to 25 + 144 = 169, and 13² = 169. Their equality proves it is a right triangle.</p>
+<p class="answer"><strong>13 is longest · Yes</strong></p></div></details>
+</article><article class="pair" id="c7-q18" aria-label="Question 18 and matching practice">
+<div class="task original"><h4>Original 18</h4><p class="prompt">For 6, 7, 9, circle the longest side. Then complete the second row above.</p><a class="reference" href="#c7-test-table">Worksheet table ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 9 as c, the longest side.</li><li>The second row gets a² + b² = 6² + 7² = 85 and c² = 9² = 81.</li><li>Circle No because 85 ≠ 81.</li></ol>
+<p class="answer"><strong>9 is longest · No</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">For 5, 6, 8, identify the longest side and decide whether the triangle is right by comparing the squares.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Use c = 8. Compute 5² + 6² = 25 + 36 = 61 and 8² = 64. Since 61 ≠ 64, these sides do not make a right triangle.</p>
+<p class="answer"><strong>8 is longest · No</strong></p></div></details>
+</article><article class="pair" id="c7-q19" aria-label="Question 19 and matching practice">
+<div class="task original"><h4>Original 19</h4><p class="prompt">A gym is 7 m by 24 m. Is its diagonal 25 m? Show one equation.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The legs are the perpendicular edges of the rectangular gym. The equation d = √(7² + 24²) m = √625 m = 25 m verifies the claim.</p>
+<p class="answer"><strong>Yes, 25 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular court is 8 m by 15 m. Is its diagonal 17 m? Show one equation.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The two dimensions meet at 90°. So d = √(8² + 15²) m = √289 m = 17 m.</p>
+<p class="answer"><strong>Yes, 17 m</strong></p></div></details>
+</article><article class="pair" id="c7-q20" aria-label="Question 20 and matching practice">
+<div class="task original"><h4>Original 20</h4><p class="prompt">A courtyard is 6 m by 8 m. Find the straight diagonal distance.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Model the courtyard as a rectangle. The diagonal is the hypotenuse between opposite corners.</li><li>d² = 6² + 8² = 36 + 64 = 100, so d = √100 = 10 m.</li></ol>
+<p class="answer"><strong>10 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular patio is 9 ft by 12 ft. Find the straight distance between opposite corners.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The two adjoining edges meet at a right angle.</li><li>d² = 9² + 12² = 81 + 144 = 225. The positive solution is d = 15 ft.</li></ol>
+<p class="answer"><strong>15 ft</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-8" aria-labelledby="title-8" data-strand="Geometry">
+<header><p class="chapter-kicker">Chapter 08 <span aria-hidden="true">/</span> Geometry</p>
+<h2 id="title-8">Checking a claimed diagonal</h2>
+<p class="source">Image 8 · Pythagorean Relationship Core Practice · Questions 13–20</p>
+<p class="goal">Test a proposed side length and report a diagonal in exact or rounded form.</p><p class="source-note">This attachment repeats the original worksheet in Chapter 7. This chapter pairs the original questions with a different practice set.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Check with squares</h4><p>If a rectangle has side lengths a and b, compare a² + b² with the square of the claimed diagonal. Both measurements must use the same unit.</p></div><div><h4>Keep the radical</h4><p>When a² + b² is not a perfect square, √(a² + b²) is an exact length. Use a decimal when the question asks for an estimate.</p></div><div><h4>Round using a midpoint</h4><p>To round a square root to a tenth, locate two consecutive tenths around it. Compare the radicand with the square of their midpoint.</p></div></div>
+<figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A rectangle with perpendicular sides length and width. Its diagonal is labeled d." xmlns="http://www.w3.org/2000/svg"><path class="dashed" d="M45 174V58H305"/><path class="shape" d="M45 174H305V58Z"/><path class="marker" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">length</text><text x="315" y="119" text-anchor="start">width</text><text class="hot" x="154" y="105" text-anchor="middle">d</text></svg><figcaption>The diagonal d is the hypotenuse of the shaded right triangle.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>A 4 ft by 4 ft square has diagonal √32 ft. It lies between 5.6 and 5.7 ft, and 32 &gt; 5.65² = 31.9225, so it rounds to 5.7 ft.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 8 questions"><span class="jump-label">Jump to question</span><a href="#c8-q13" aria-label="Question 13">13</a><a href="#c8-q14" aria-label="Question 14">14</a><a href="#c8-q15" aria-label="Question 15">15</a><a href="#c8-q16" aria-label="Question 16">16</a><a href="#c8-q17" aria-label="Question 17">17</a><a href="#c8-q18" aria-label="Question 18">18</a><a href="#c8-q19" aria-label="Question 19">19</a><a href="#c8-q20" aria-label="Question 20">20</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Squares and square roots</h3><article class="pair" id="c8-q13" aria-label="Question 13 and matching practice">
+<div class="task original"><h4>Original 13</h4><p class="prompt">3² = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The exponent 2 means multiply 3 by itself. So 3² = 3 × 3 = 9.</p>
+<p class="answer"><strong>9</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">10² = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">10² is 10 × 10, which equals 100.</p>
+<p class="answer"><strong>100</strong></p></div></details>
+</article><article class="pair" id="c8-q14" aria-label="Question 14 and matching practice">
+<div class="task original"><h4>Original 14</h4><p class="prompt">8² = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">8² means 8 × 8. The product is 64.</p>
+<p class="answer"><strong>64</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">11² = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Multiply 11 by 11 to get 121.</p>
+<p class="answer"><strong>121</strong></p></div></details>
+</article><article class="pair" id="c8-q15" aria-label="Question 15 and matching practice">
+<div class="task original"><h4>Original 15</h4><p class="prompt">√81 = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The radical asks for the nonnegative number whose square is 81. Since 9 × 9 = 81, the root is 9.</p>
+<p class="answer"><strong>9</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">√196 = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">14 × 14 = 196. Because 14 is nonnegative, it is the principal square root.</p>
+<p class="answer"><strong>14</strong></p></div></details>
+</article><article class="pair" id="c8-q16" aria-label="Question 16 and matching practice">
+<div class="task original"><h4>Original 16</h4><p class="prompt">√144 = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">12² = 12 × 12 = 144. The principal square root is 12.</p>
+<p class="answer"><strong>12</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">√225 = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The nonnegative number 15 satisfies 15² = 225, so √225 = 15.</p>
+<p class="answer"><strong>15</strong></p></div></details>
+</article><h3 class="set-title">Test and apply</h3><div class="table-frame" id="c8-test-table"><table aria-label="Original test and apply worksheet table">
+<thead><tr><th scope="col">Side lengths</th><th scope="col">Show a² + b² and c²</th><th scope="col">Right triangle?</th></tr></thead>
+<tbody><tr><th scope="row">3, 4, 5</th><td>________________</td><td>Yes / No</td></tr>
+<tr><th scope="row">6, 7, 9</th><td>________________</td><td>Yes / No</td></tr></tbody></table></div><article class="pair" id="c8-q17" aria-label="Question 17 and matching practice">
+<div class="task original"><h4>Original 17</h4><p class="prompt">For 3, 4, 5, circle the longest side. Then complete the first row above.</p><a class="reference" href="#c8-test-table">Worksheet table ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 5 as c, the longest side.</li><li>The first row gets a² + b² = 3² + 4² = 25 and c² = 5² = 25.</li><li>Circle Yes because the values are equal.</li></ol>
+<p class="answer"><strong>5 is longest · Yes</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">For 20, 21, 29, identify c, compare a² + b² and c², and decide whether the triangle is right.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Use c = 29. Then 20² + 21² = 400 + 441 = 841, and 29² = 841. Equality proves the triangle is right.</p>
+<p class="answer"><strong>29 is longest · Yes</strong></p></div></details>
+</article><article class="pair" id="c8-q18" aria-label="Question 18 and matching practice">
+<div class="task original"><h4>Original 18</h4><p class="prompt">For 6, 7, 9, circle the longest side. Then complete the second row above.</p><a class="reference" href="#c8-test-table">Worksheet table ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 9 as c, the longest side.</li><li>The second row gets a² + b² = 6² + 7² = 85 and c² = 9² = 81.</li><li>Circle No because 85 ≠ 81.</li></ol>
+<p class="answer"><strong>9 is longest · No</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">For 8, 9, 11, identify the longest side and test whether the triangle is right.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Compute 8² + 9² = 64 + 81 = 145. The longest side gives 11² = 121. These values differ, so the triangle is not right.</p>
+<p class="answer"><strong>11 is longest · No</strong></p></div></details>
+</article><article class="pair" id="c8-q19" aria-label="Question 19 and matching practice">
+<div class="task original"><h4>Original 19</h4><p class="prompt">A gym is 7 m by 24 m. Is its diagonal 25 m? Show one equation.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The legs are the perpendicular edges of the rectangular gym. The equation d = √(7² + 24²) m = √625 m = 25 m verifies the claim.</p>
+<p class="answer"><strong>Yes, 25 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular classroom is 10 m by 24 m. Is its diagonal 25 m? Show one equation.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The sides meet at 90°, so d = √(10² + 24²) m = √676 m = 26 m. The claimed 25 m differs from the calculated distance.</p>
+<p class="answer"><strong>No. The diagonal is 26 m.</strong></p></div></details>
+</article><article class="pair" id="c8-q20" aria-label="Question 20 and matching practice">
+<div class="task original"><h4>Original 20</h4><p class="prompt">A courtyard is 6 m by 8 m. Find the straight diagonal distance.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Model the courtyard as a rectangle. The diagonal is the hypotenuse between opposite corners.</li><li>d² = 6² + 8² = 36 + 64 = 100, so d = √100 = 10 m.</li></ol>
+<p class="answer"><strong>10 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular garden bed is 7 m by 10 m. Find the exact diagonal and then round to the nearest tenth of a meter.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The sides are perpendicular, so d² = 7² + 10² = 49 + 100 = 149.</li><li>The exact positive length is √149 m. Since 12.15² = 147.6225 and 12.25² = 150.0625, √149 rounds to 12.2.</li></ol>
+<p class="answer"><strong>√149 m ≈ 12.2 m</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-9" aria-labelledby="title-9" data-strand="Geometry">
+<header><p class="chapter-kicker">Chapter 09 <span aria-hidden="true">/</span> Geometry</p>
+<h2 id="title-9">Testing side lengths in any order</h2>
+<p class="source">Image 9 · Pythagorean Relationship Core Practice · Questions 13–20</p>
+<p class="goal">Choose the candidate hypotenuse even when a problem lists its sides out of order.</p><p class="source-note">This attachment repeats the original worksheet in Chapter 7. This chapter pairs the original questions with a different practice set.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Choose c before squaring</h4><p>Find the largest number in the list. The hypotenuse, if there is one, has that length. The order of the other two lengths does not matter because addition can be reversed.</p></div><div><h4>Check what the test tells you</h4><p>Three positive lengths form a nondegenerate triangle if the sum of the two shorter lengths exceeds the longest. If a² + b² = c², the triangle is right. Unequal results rule out a right triangle.</p></div><div><h4>Compare a claim or calculate</h4><p>Use the equation to test a given diagonal. When the diagonal is unknown, take the positive square root of the sum of the squares of the perpendicular sides.</p></div></div>
+<figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A triangle with base a, vertical side b, and opposite side c. The small square marks the corner where a and b meet." xmlns="http://www.w3.org/2000/svg"><path class="shape" d="M45 174H305V58Z"/><path class="marker" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">a</text><text x="315" y="119" text-anchor="start">b</text><text class="hot" x="154" y="105" text-anchor="middle">c</text></svg><figcaption>The right-angle marker identifies the corner where the two legs meet.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>For sides 26, 10, and 24, choose c = 26. Since 10² + 24² = 676 = 26², the triangle is right.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 9 questions"><span class="jump-label">Jump to question</span><a href="#c9-q13" aria-label="Question 13">13</a><a href="#c9-q14" aria-label="Question 14">14</a><a href="#c9-q15" aria-label="Question 15">15</a><a href="#c9-q16" aria-label="Question 16">16</a><a href="#c9-q17" aria-label="Question 17">17</a><a href="#c9-q18" aria-label="Question 18">18</a><a href="#c9-q19" aria-label="Question 19">19</a><a href="#c9-q20" aria-label="Question 20">20</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Squares and square roots</h3><article class="pair" id="c9-q13" aria-label="Question 13 and matching practice">
+<div class="task original"><h4>Original 13</h4><p class="prompt">3² = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The exponent 2 means multiply 3 by itself. So 3² = 3 × 3 = 9.</p>
+<p class="answer"><strong>9</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">12² = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">12 × 12 = 144, so the square of 12 is 144.</p>
+<p class="answer"><strong>144</strong></p></div></details>
+</article><article class="pair" id="c9-q14" aria-label="Question 14 and matching practice">
+<div class="task original"><h4>Original 14</h4><p class="prompt">8² = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">8² means 8 × 8. The product is 64.</p>
+<p class="answer"><strong>64</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">15² = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Multiplying 15 by itself gives 15 × 15 = 225.</p>
+<p class="answer"><strong>225</strong></p></div></details>
+</article><article class="pair" id="c9-q15" aria-label="Question 15 and matching practice">
+<div class="task original"><h4>Original 15</h4><p class="prompt">√81 = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The radical asks for the nonnegative number whose square is 81. Since 9 × 9 = 81, the root is 9.</p>
+<p class="answer"><strong>9</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">√256 = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">16 × 16 = 256, and the radical selects the nonnegative value, 16.</p>
+<p class="answer"><strong>16</strong></p></div></details>
+</article><article class="pair" id="c9-q16" aria-label="Question 16 and matching practice">
+<div class="task original"><h4>Original 16</h4><p class="prompt">√144 = <span class="blank">____</span></p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">12² = 12 × 12 = 144. The principal square root is 12.</p>
+<p class="answer"><strong>12</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">√289 = <span class="blank">____</span></p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">17² = 289. Since 17 is positive, √289 = 17.</p>
+<p class="answer"><strong>17</strong></p></div></details>
+</article><h3 class="set-title">Test and apply</h3><div class="table-frame" id="c9-test-table"><table aria-label="Original test and apply worksheet table">
+<thead><tr><th scope="col">Side lengths</th><th scope="col">Show a² + b² and c²</th><th scope="col">Right triangle?</th></tr></thead>
+<tbody><tr><th scope="row">3, 4, 5</th><td>________________</td><td>Yes / No</td></tr>
+<tr><th scope="row">6, 7, 9</th><td>________________</td><td>Yes / No</td></tr></tbody></table></div><article class="pair" id="c9-q17" aria-label="Question 17 and matching practice">
+<div class="task original"><h4>Original 17</h4><p class="prompt">For 3, 4, 5, circle the longest side. Then complete the first row above.</p><a class="reference" href="#c9-test-table">Worksheet table ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 5 as c, the longest side.</li><li>The first row gets a² + b² = 3² + 4² = 25 and c² = 5² = 25.</li><li>Circle Yes because the values are equal.</li></ol>
+<p class="answer"><strong>5 is longest · Yes</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">For 13, 5, 12, identify the longest side and test whether this is a right triangle.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The numbers are out of size order, so identify 13 as the largest before assigning c.</li><li>5² + 12² = 25 + 144 = 169 = 13², proving that the triangle is right.</li></ol>
+<p class="answer"><strong>13 is longest · Yes</strong></p></div></details>
+</article><article class="pair" id="c9-q18" aria-label="Question 18 and matching practice">
+<div class="task original"><h4>Original 18</h4><p class="prompt">For 6, 7, 9, circle the longest side. Then complete the second row above.</p><a class="reference" href="#c9-test-table">Worksheet table ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 9 as c, the longest side.</li><li>The second row gets a² + b² = 6² + 7² = 85 and c² = 9² = 81.</li><li>Circle No because 85 ≠ 81.</li></ol>
+<p class="answer"><strong>9 is longest · No</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">For 12, 9, 14, identify the longest side and test whether the triangle is right.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The two smaller sides give 9² + 12² = 81 + 144 = 225. The largest side gives 14² = 196.</li><li>The different results rule out a right triangle.</li></ol>
+<p class="answer"><strong>14 is longest · No</strong></p></div></details>
+</article><article class="pair" id="c9-q19" aria-label="Question 19 and matching practice">
+<div class="task original"><h4>Original 19</h4><p class="prompt">A gym is 7 m by 24 m. Is its diagonal 25 m? Show one equation.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The legs are the perpendicular edges of the rectangular gym. The equation d = √(7² + 24²) m = √625 m = 25 m verifies the claim.</p>
+<p class="answer"><strong>Yes, 25 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular gym is 12 m by 16 m. Is its diagonal 20 m? Show one equation.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The two gym edges are perpendicular legs. The diagonal is d = √(12² + 16²) m = √400 m = 20 m.</p>
+<p class="answer"><strong>Yes, 20 m</strong></p></div></details>
+</article><article class="pair" id="c9-q20" aria-label="Question 20 and matching practice">
+<div class="task original"><h4>Original 20</h4><p class="prompt">A courtyard is 6 m by 8 m. Find the straight diagonal distance.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Model the courtyard as a rectangle. The diagonal is the hypotenuse between opposite corners.</li><li>d² = 6² + 8² = 36 + 64 = 100, so d = √100 = 10 m.</li></ol>
+<p class="answer"><strong>10 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A rectangular lot is 12 yd by 35 yd. Find the straight diagonal distance.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The diagonal spans a right triangle with legs 12 yd and 35 yd.</li><li>d² = 12² + 35² = 144 + 1225 = 1369. Take the positive square root to get 37 yd.</li></ol>
+<p class="answer"><strong>37 yd</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-10" aria-labelledby="title-10" data-strand="Geometry">
+<header><p class="chapter-kicker">Chapter 10 <span aria-hidden="true">/</span> Geometry</p>
+<h2 id="title-10">Anatomy of a right triangle</h2>
+<p class="source">Image 10 · Pythagorean Relationship Core Practice · Grade 8, Week 2, Questions 1–12</p>
+<p class="goal">Use the right-angle marker, identify the legs and hypotenuse, and write their squared relationship.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Start with the marker</h4><p>A small square marks the 90° corner. The sides touching that corner are the legs. The opposite side is the hypotenuse.</p></div><div><h4>The labels can change</h4><p>The theorem refers to the roles of the sides. If g and h are the legs and j is opposite the right angle, write g² + h² = j².</p></div><div><h4>Think in square units</h4><p>A square built on a side of length a has area a². The areas of the squares on the legs add to the area of the square on the hypotenuse.</p></div></div>
+<figure class="diagram "><svg viewBox="60 -24 211 203" role="img" aria-label="A 3-4-5 right triangle with a square on each side. The leg squares have areas 9 and 16, and the square on the hypotenuse has area 25." xmlns="http://www.w3.org/2000/svg"><path class="face-top" d="M133 101H197V165H133Z"/><path class="face-front" d="M197 101H245V53H197Z"/><path class="face-side" d="M133 101L197 53L149-11L85 37Z"/><path class="shape" d="M133 101H197V53Z"/><path class="marker" d="M187 101V91H197"/><text x="165" y="139" text-anchor="middle">16</text><text x="221" y="83" text-anchor="middle">9</text><text x="141" y="49" text-anchor="middle">25</text></svg><figcaption>Leg-square areas 9 + 16 equal the hypotenuse-square area 25.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>A 3–4–5 right triangle has leg-square areas 9 and 16 square units. Together they equal the 25 square units of the hypotenuse square.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 10 questions"><span class="jump-label">Jump to question</span><a href="#c10-q1" aria-label="Question 1">1</a><a href="#c10-q2" aria-label="Question 2">2</a><a href="#c10-q3" aria-label="Question 3">3</a><a href="#c10-q4" aria-label="Question 4">4</a><a href="#c10-q5" aria-label="Question 5">5</a><a href="#c10-q6" aria-label="Question 6">6</a><a href="#c10-q7" aria-label="Question 7">7</a><a href="#c10-q8" aria-label="Question 8">8</a><a href="#c10-q9" aria-label="Question 9">9</a><a href="#c10-q10" aria-label="Question 10">10</a><a href="#c10-q11" aria-label="Question 11">11</a><a href="#c10-q12" aria-label="Question 12">12</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Vocabulary questions</h3><article class="pair" id="c10-q1" aria-label="Question 1 and matching practice">
+<div class="task original"><h4>Original 1</h4><p class="prompt">A triangle containing one 90° angle is a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A right triangle is defined by the presence of a right angle, which measures 90°.</p>
+<p class="answer"><strong>Right triangle</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A triangle’s angles measure 90°, 35°, and 55°. Classify it by its angles.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">One of the angles is 90°, so the triangle is right. Its other two angles add to 90°.</p>
+<p class="answer"><strong>Right triangle</strong></p></div></details>
+</article><article class="pair" id="c10-q2" aria-label="Question 2 and matching practice">
+<div class="task original"><h4>Original 2</h4><p class="prompt">An angle measuring 90° is a <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A 90° angle is one quarter of a full turn. It is a right angle, often shown by a small square.</p>
+<p class="answer"><strong>Right angle</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Two line segments meet at a quarter-turn. What angle do they form, and what is its measure?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">A full turn is 360°. Divide by 4 to obtain 90°, the measure of a right angle.</p>
+<p class="answer"><strong>Right angle · 90°</strong></p></div></details>
+</article><article class="pair" id="c10-q3" aria-label="Question 3 and matching practice">
+<div class="task original"><h4>Original 3</h4><p class="prompt">The two sides meeting at the right angle are the <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The two sides that form the 90° corner are perpendicular. In a right triangle they are called the legs.</p>
+<p class="answer"><strong>Legs</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In △MNP, ∠N = 90°. Name the legs.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Both segments meet at vertex N, so both form the right angle. MN and NP are the legs.</p>
+<p class="answer"><strong>MN and NP</strong></p></div></details>
+</article><article class="pair" id="c10-q4" aria-label="Question 4 and matching practice">
+<div class="task original"><h4>Original 4</h4><p class="prompt">The side opposite the right angle is the <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Locate the 90° vertex, then look across the triangle to the side connecting the two other vertices.</p>
+<p class="answer"><strong>Hypotenuse</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In △RST, ∠S = 90°. Name the hypotenuse.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">R and T are the two vertices away from the right angle. RT connects them, putting it opposite ∠S.</p>
+<p class="answer"><strong>RT</strong></p></div></details>
+</article><article class="pair" id="c10-q5" aria-label="Question 5 and matching practice">
+<div class="task original"><h4>Original 5</h4><p class="prompt">Which side is always longest in a right triangle?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The 90° angle is the largest angle in a right triangle. Its opposite side, the hypotenuse, is therefore the longest. The equation c² = a² + b² also gives c² greater than either leg square.</p>
+<p class="answer"><strong>The hypotenuse</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In a right triangle, the legs are 6 in. and 8 in. Which side is longest, and how long is it?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The longest side is opposite the right angle. Its square is 6² + 8² = 36 + 64 = 100, giving length 10 in.</p>
+<p class="answer"><strong>The hypotenuse · 10 in.</strong></p></div></details>
+</article><article class="pair" id="c10-q6" aria-label="Question 6 and matching practice">
+<div class="task original"><h4>Original 6</h4><p class="prompt">Complete the relationship: a² + b² = <span class="blank">____</span>.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">In standard notation, a and b represent the legs. Their squares add up to the square of the hypotenuse, c².</p>
+<p class="answer"><strong>c²</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Sides p and q are the legs, and r is the hypotenuse. Complete p² + q² = <span class="blank">____</span>.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Add the squares of the two legs. The result is the square of the hypotenuse r.</p>
+<p class="answer"><strong>r²</strong></p></div></details>
+</article><article class="pair" id="c10-q7" aria-label="Question 7 and matching practice">
+<div class="task original"><h4>Original 7</h4><p class="prompt">In a² + b² = c², which letter names the hypotenuse?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The letter c names the side length. The expression c² is its square, which can represent an area.</p>
+<p class="answer"><strong>c</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In m² + n² = t² for a right triangle, which letter names the hypotenuse?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The variable that is squared by itself on the right represents the hypotenuse length. Here it is t.</p>
+<p class="answer"><strong>t</strong></p></div></details>
+</article><article class="pair" id="c10-q8" aria-label="Question 8 and matching practice">
+<div class="task original"><h4>Original 8</h4><p class="prompt">The squared values represent the areas of <span class="blank">____</span> built on the sides.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">A square with side length a has area a × a = a². The same rule gives areas b² and c² for the squares on the other two sides.</p>
+<p class="answer"><strong>Squares</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A square is drawn on a 6 cm leg. What is its area and what squared expression represents it?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The side of the square is 6 cm. Its area is 6 cm × 6 cm = 36 cm², so the squared expression is 6².</p>
+<p class="answer"><strong>36 cm² · 6²</strong></p></div></details>
+</article><h3 class="set-title">Triangle labels</h3><p class="directions">Use the right-angle marker to name the legs and hypotenuse.</p><div class="two-figures" id="triangle-labels"><figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A triangle with base x, vertical side y, and opposite side z. The small square marks the corner where x and y meet." xmlns="http://www.w3.org/2000/svg"><path class="shape" d="M45 174H305V58Z"/><path class="marker" d="M285 174V154H305"/><text x="175" y="204" text-anchor="middle">x</text><text x="315" y="119" text-anchor="start">y</text><text class="hot" x="154" y="105" text-anchor="middle">z</text></svg><figcaption>Original diagram for Questions 9–12.</figcaption></figure><figure class="diagram "><svg viewBox="0 35 365 185" role="img" aria-label="A triangle with base p, vertical side q, and opposite side r. The small square marks the corner where p and q meet." xmlns="http://www.w3.org/2000/svg"><path class="shape" d="M315 174H55V58Z"/><path class="marker" d="M55 154H75V174"/><text x="175" y="204" text-anchor="middle">p</text><text x="23" y="119" text-anchor="end">q</text><text class="hot" x="211" y="105" text-anchor="middle">r</text></svg><figcaption>Diagram for the matching practice questions.</figcaption></figure></div><article class="pair" id="c10-q9" aria-label="Question 9 and matching practice">
+<div class="task original"><h4>Original 9</h4><p class="prompt">Which two labelled sides are the legs? <span class="blank">____</span> and <span class="blank">____</span></p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The original diagram places the right-angle marker where the bottom side x meets the right side y. Those sides are the legs.</p>
+<p class="answer"><strong>x and y</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In the practice diagram, which two labeled sides are the legs?</p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Both labeled sides touch the marked 90° corner. In the practice diagram, those are p and q.</p>
+<p class="answer"><strong>p and q</strong></p></div></details>
+</article><article class="pair" id="c10-q10" aria-label="Question 10 and matching practice">
+<div class="task original"><h4>Original 10</h4><p class="prompt">Which labelled side is the hypotenuse? <span class="blank">____</span></p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The right-angle marker is at the corner joining x and y. The opposite side is z.</p>
+<p class="answer"><strong>z</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In the practice diagram, which labeled side is the hypotenuse?</p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The side r is across from the right-angle marker. It remains the hypotenuse after the drawing is turned or reflected.</p>
+<p class="answer"><strong>r</strong></p></div></details>
+</article><article class="pair" id="c10-q11" aria-label="Question 11 and matching practice">
+<div class="task original"><h4>Original 11</h4><p class="prompt">Write the relationship using x, y, and z: <span class="blank">____</span></p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Square the legs x and y and add. The result equals the square of the opposite side z.</p>
+<p class="answer"><strong>x² + y² = z²</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Write the Pythagorean relationship for the sides p, q, and r shown in the practice diagram.</p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The marker identifies p and q as legs, with r across from the marked corner. Substitute the labels in the theorem.</p>
+<p class="answer"><strong>p² + q² = r²</strong></p></div></details>
+</article><article class="pair" id="c10-q12" aria-label="Question 12 and matching practice">
+<div class="task original"><h4>Original 12</h4><p class="prompt">Which labelled sides touch the right angle? <span class="blank">____</span> and <span class="blank">____</span></p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The square marker meets side x along the bottom and side y along the right. Those are the sides that form the angle.</p>
+<p class="answer"><strong>x and y</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In the practice diagram, which sides have the right-angle vertex as a shared endpoint?</p><a class="reference" href="#triangle-labels">Triangle diagrams ↑</a></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Both p and q meet at the marked vertex. Side r connects the other two corners.</p>
+<p class="answer"><strong>p and q</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-11" aria-labelledby="title-11" data-strand="Number Sense">
+<header><p class="chapter-kicker">Chapter 11 <span aria-hidden="true">/</span> Number Sense</p>
+<h2 id="title-11">Perfect squares &amp; prime factors</h2>
+<p class="source">Image 11 · Grade 8 Mathematics Assessment · Part A, Questions 1–10</p>
+<p class="goal">Read radical notation, recognize perfect squares, and break composite numbers into prime factors.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Read a square root</h4><p>In √49, √ is the radical sign and 49 is the radicand. The radical gives the nonnegative square root, which is 7. A perfect square is the product of an integer with itself.</p></div><div><h4>Find prime factors</h4><p>A prime number is a whole number greater than 1 with exactly two positive factors. To factor a composite number, keep splitting it into factors until every factor is prime.</p></div><div><h4>Round a root</h4><p>Find the two consecutive whole numbers around the root. Compare the radicand to the square of their midpoint to see which whole number is closer.</p></div></div>
+<figure class="diagram "><svg viewBox="10 0 317 221" role="img" aria-label="A square 3 units on a side. It is split into three rows by three columns for an area of 9 square units." xmlns="http://www.w3.org/2000/svg"><rect class="face-top" x="111" y="17" width="122" height="122" rx="2"/><path class="gridlines" d="M151.67 17v122m40.66-122v122M111 57.67h122m-122 40.66h122"/><path class="linkline" d="M111 155v11m122-11v11m-122-5h122M95 17H84m11 122H84m6-122v122"/><g text-anchor="middle"><text x="172" y="183">3 units</text><text x="57" y="83">3 units</text><text class="hot" x="172" y="211">3² = 9</text></g></svg><figcaption>The square has area 9 square units and side length √9 = 3 units.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>For √38, use 6² = 36 and 7² = 49. Since 38 &lt; 6.5² = 42.25, the root is closer to 6.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 11 questions"><span class="jump-label">Jump to question</span><a href="#c11-q1" aria-label="Question 1">1</a><a href="#c11-q2" aria-label="Question 2">2</a><a href="#c11-q3" aria-label="Question 3">3</a><a href="#c11-q4" aria-label="Question 4">4</a><a href="#c11-q5" aria-label="Question 5">5</a><a href="#c11-q6" aria-label="Question 6">6</a><a href="#c11-q7" aria-label="Question 7">7</a><a href="#c11-q8" aria-label="Question 8">8</a><a href="#c11-q9" aria-label="Question 9">9</a><a href="#c11-q10" aria-label="Question 10">10</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Part A</h3><p class="directions">Total 30 points across Parts A and B. Questions 1–10 are worth 1 point each, and Questions 11–20 are worth 2 points each. No calculator. Show all work for Questions 10–20. Estimate roots to the nearest whole number.</p><article class="pair" id="c11-q1" aria-label="Question 1 and matching practice">
+<div class="task original"><h4>Original 1</h4><p class="prompt">Which definition describes a perfect square?</p><ol class="choices" type="A"><li>A number with two factors</li><li>A number made by multiplying an integer by itself</li><li>Any even number</li><li>A number ending in zero</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">For example, 49 = 7 × 7, so 49 is a perfect square. The integer is used twice as a factor.</p>
+<p class="answer"><strong>B. A number made by multiplying an integer by itself</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Which number is a perfect square?</p><ol class="choices" type="A"><li>26</li><li>30</li><li>36</li><li>42</li></ol></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">6 × 6 = 36. The numbers 26 and 30 lie between 25 and 36. The number 42 lies between 36 and 49.</p>
+<p class="answer"><strong>C. 36</strong></p></div></details>
+</article><article class="pair" id="c11-q2" aria-label="Question 2 and matching practice">
+<div class="task original"><h4>Original 2</h4><p class="prompt">In √90, what is the radicand?</p><ol class="choices" type="A"><li>√</li><li>9</li><li>90</li><li>900</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The radicand is the quantity under the radical sign. In this expression the whole quantity is 90.</p>
+<p class="answer"><strong>C. 90</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">What is the radicand in √(18 + 7)?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The parentheses show that the radical applies to the entire sum. The radicand is 18 + 7, with value 25.</p>
+<p class="answer"><strong>18 + 7, which equals 25</strong></p></div></details>
+</article><article class="pair" id="c11-q3" aria-label="Question 3 and matching practice">
+<div class="task original"><h4>Original 3</h4><p class="prompt">What is the name of the symbol √?</p><ol class="choices" type="A"><li>Radical symbol</li><li>Product sign</li><li>Prime symbol</li><li>Estimate sign</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The radical sign √ tells you to take a root. With no small index written, it means a square root.</p>
+<p class="answer"><strong>A. Radical symbol</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In the expression √121, which symbol is the radical sign and what operation does it indicate?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The √ symbol asks for the nonnegative square root. Since 11² = 121, this expression has value 11.</p>
+<p class="answer"><strong>√ · Take the principal square root</strong></p></div></details>
+</article><article class="pair" id="c11-q4" aria-label="Question 4 and matching practice">
+<div class="task original"><h4>Original 4</h4><p class="prompt">What does principal square root mean?</p><ol class="choices" type="A"><li>A negative root</li><li>A root that is zero or positive</li><li>Any factor</li><li>A prime factor</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">Both 5 and −5 square to 25. The radical √25 selects the nonnegative value, 5. For 0, the principal square root is 0.</p>
+<p class="answer"><strong>B. A root that is zero or positive</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Both 6 and −6 square to 36. What is √36, and why?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The radical √ represents the principal square root, which is nonnegative. Of the two numbers named, 6 fits that definition.</p>
+<p class="answer"><strong>6</strong></p></div></details>
+</article><article class="pair" id="c11-q5" aria-label="Question 5 and matching practice">
+<div class="task original"><h4>Original 5</h4><p class="prompt">Which number is prime?</p><ol class="choices" type="A"><li>21</li><li>29</li><li>39</li><li>51</li></ol></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>21 = 3 × 7, 39 = 3 × 13, and 51 = 3 × 17.</li><li>For 29, check primes up to √29, which is between 5 and 6. It is not divisible by 2, 3, or 5, so 29 is prime.</li></ol>
+<p class="answer"><strong>B. 29</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Which number is prime?</p><ol class="choices" type="A"><li>27</li><li>31</li><li>35</li><li>49</li></ol></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>27 = 3 × 9, 35 = 5 × 7, and 49 = 7 × 7.</li><li>For 31, √31 is between 5 and 6. None of the primes 2, 3, or 5 divides 31, so 31 is prime.</li></ol>
+<p class="answer"><strong>B. 31</strong></p></div></details>
+</article><article class="pair" id="c11-q6" aria-label="Question 6 and matching practice">
+<div class="task original"><h4>Original 6</h4><p class="prompt">Calculate 7².</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">7² means 7 × 7, which equals 49.</p>
+<p class="answer"><strong>49</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Calculate 13².</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Multiplying 13 by itself gives 13 × 13 = 169.</p>
+<p class="answer"><strong>169</strong></p></div></details>
+</article><article class="pair" id="c11-q7" aria-label="Question 7 and matching practice">
+<div class="task original"><h4>Original 7</h4><p class="prompt">Find the principal square root of 81.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">9² = 81. The principal root is the nonnegative value, so √81 = 9.</p>
+<p class="answer"><strong>9</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Find the principal square root of 100.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">10 × 10 = 100, and 10 is nonnegative. Therefore √100 = 10.</p>
+<p class="answer"><strong>10</strong></p></div></details>
+</article><article class="pair" id="c11-q8" aria-label="Question 8 and matching practice">
+<div class="task original"><h4>Original 8</h4><p class="prompt">Which number is a perfect square: 45, 49, 52, or 60?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">7² = 49. The number 45 lies between 6² = 36 and 7² = 49. The numbers 52 and 60 lie between 7² = 49 and 8² = 64.</p>
+<p class="answer"><strong>49</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Choose the perfect square from 62, 68, 81, and 88.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">9² = 81. The number 62 lies between 49 and 64, 68 lies between 64 and 81, and 88 lies between 81 and 100.</p>
+<p class="answer"><strong>81</strong></p></div></details>
+</article><article class="pair" id="c11-q9" aria-label="Question 9 and matching practice">
+<div class="task original"><h4>Original 9</h4><p class="prompt">Write 36 as a product of prime factors.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Split 36 into 4 × 9. Then 4 = 2 × 2 and 9 = 3 × 3.</li><li>The factors 2 and 3 are prime, so 36 = 2 × 2 × 3 × 3 = 2² × 3².</li></ol>
+<p class="answer"><strong>2² × 3²</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Write 72 as a product of prime factors.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Split 72 into 8 × 9. Break these apart into 2 × 2 × 2 and 3 × 3.</li><li>Group equal factors to get 72 = 2³ × 3².</li></ol>
+<p class="answer"><strong>2³ × 3²</strong></p></div></details>
+</article><article class="pair" id="c11-q10" aria-label="Question 10 and matching practice">
+<div class="task original"><h4>Original 10</h4><p class="prompt">Estimate √50 to the nearest whole number. Show your work.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>7² = 49 and 8² = 64, so √50 is between 7 and 8.</li><li>The halfway point is 7.5. Its square is 56.25, and 50 &lt; 56.25. Thus √50 &lt; 7.5, so it rounds to 7.</li></ol>
+<p class="answer"><strong>7</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Estimate √74 to the nearest whole number. Show your work.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>8² = 64 and 9² = 81, so √74 lies between 8 and 9.</li><li>The midpoint is 8.5, and 8.5² = 72.25. Since 74 &gt; 72.25, the root rounds to 9.</li></ol>
+<p class="answer"><strong>9</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-12" aria-labelledby="title-12" data-strand="Number Sense">
+<header><p class="chapter-kicker">Chapter 12 <span aria-hidden="true">/</span> Number Sense</p>
+<h2 id="title-12">Estimating and finding roots</h2>
+<p class="source">Image 12 · Grade 8 Mathematics Assessment · Part B, Questions 11–20</p>
+<p class="goal">Use factor trees, pair primes, and justify estimates for square side lengths.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Make equal prime pairs</h4><p>Find the prime factorization. If each prime appears an even number of times, pair identical factors. One factor from each pair makes the principal square root.</p></div><div><h4>Compare and round</h4><p>The square root preserves the order of nonnegative numbers. Between n and n + 1, compare the radicand to (n + 0.5)² to find the closer whole number.</p></div><div><h4>Recover a side length</h4><p>For a square with area A, its side length is √A. Square meters become meters when you report that length. Square feet become feet.</p></div></div>
+<figure class="diagram "><svg viewBox="10 0 317 221" role="img" aria-label="A square 3 units on a side. It is split into three rows by three columns for an area of 9 square units." xmlns="http://www.w3.org/2000/svg"><rect class="face-top" x="111" y="17" width="122" height="122" rx="2"/><path class="gridlines" d="M151.67 17v122m40.66-122v122M111 57.67h122m-122 40.66h122"/><path class="linkline" d="M111 155v11m122-11v11m-122-5h122M95 17H84m11 122H84m6-122v122"/><g text-anchor="middle"><text x="172" y="183">3 units</text><text x="57" y="83">3 units</text><text class="hot" x="172" y="211">3² = 9</text></g></svg><figcaption>The square has area 9 square units and side length √9 = 3 units.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>196 = (2 × 2) × (7 × 7), so a square of area 196 ft² has side length 2 × 7 = 14 ft.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 12 questions"><span class="jump-label">Jump to question</span><a href="#c12-q11" aria-label="Question 11">11</a><a href="#c12-q12" aria-label="Question 12">12</a><a href="#c12-q13" aria-label="Question 13">13</a><a href="#c12-q14" aria-label="Question 14">14</a><a href="#c12-q15" aria-label="Question 15">15</a><a href="#c12-q16" aria-label="Question 16">16</a><a href="#c12-q17" aria-label="Question 17">17</a><a href="#c12-q18" aria-label="Question 18">18</a><a href="#c12-q19" aria-label="Question 19">19</a><a href="#c12-q20" aria-label="Question 20">20</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Part B</h3><p class="directions">No calculator. Show all work. Estimate roots to the nearest whole number where requested.</p><article class="pair" id="c12-q11" aria-label="Question 11 and matching practice">
+<div class="task original"><h4>Original 11</h4><p class="prompt">Use a factor tree to write 84 as a product of prime factors.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Start with 84 and branch to 4 and 21.</li><li>Branch 4 into 2 and 2, and 21 into 3 and 7. Each leaf is prime.</li><li>Multiplying the leaves gives 84 = 2 × 2 × 3 × 7 = 2² × 3 × 7.</li></ol><figure class="diagram tree"><svg viewBox="0 0 280 149" role="img" aria-label="Factor tree. 84 splits into 4 and 21. 4 splits into 2 and 2. 21 splits into 3 and 7." xmlns="http://www.w3.org/2000/svg"><path class="linkline" d="M140 30L75 65M140 30L205 65M75 77L44 119M75 77L105 119M205 77L175 119M205 77L236 119"/><g text-anchor="middle"><circle class="neutral" cx="140" cy="25" r="20"/><text x="140" y="31">84</text><circle class="neutral" cx="75" cy="70" r="17"/><text x="75" y="76">4</text><circle class="neutral" cx="205" cy="70" r="17"/><text x="205" y="76">21</text><circle class="prime" cx="44" cy="123" r="16"/><text x="44" y="129">2</text><circle class="prime" cx="105" cy="123" r="16"/><text x="105" y="129">2</text><circle class="prime" cx="175" cy="123" r="16"/><text x="175" y="129">3</text><circle class="prime" cx="236" cy="123" r="16"/><text x="236" y="129">7</text></g></svg><figcaption>The blue circles mark the prime factors.</figcaption></figure>
+<p class="answer"><strong>2² × 3 × 7</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Use a factor tree to write 90 as a product of prime factors.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Start with 90 and branch to 9 and 10.</li><li>Branch 9 into 3 and 3, and 10 into 2 and 5.</li><li>Multiplying the prime leaves gives 90 = 2 × 3² × 5.</li></ol><figure class="diagram tree"><svg viewBox="0 0 280 149" role="img" aria-label="Factor tree. 90 splits into 9 and 10. 9 splits into 3 and 3. 10 splits into 2 and 5." xmlns="http://www.w3.org/2000/svg"><path class="linkline" d="M140 30L75 65M140 30L205 65M75 77L44 119M75 77L105 119M205 77L175 119M205 77L236 119"/><g text-anchor="middle"><circle class="neutral" cx="140" cy="25" r="20"/><text x="140" y="31">90</text><circle class="neutral" cx="75" cy="70" r="17"/><text x="75" y="76">9</text><circle class="neutral" cx="205" cy="70" r="17"/><text x="205" y="76">10</text><circle class="prime" cx="44" cy="123" r="16"/><text x="44" y="129">3</text><circle class="prime" cx="105" cy="123" r="16"/><text x="105" y="129">3</text><circle class="prime" cx="175" cy="123" r="16"/><text x="175" y="129">2</text><circle class="prime" cx="236" cy="123" r="16"/><text x="236" y="129">5</text></g></svg><figcaption>The blue circles mark the prime factors.</figcaption></figure>
+<p class="answer"><strong>2 × 3² × 5</strong></p></div></details>
+</article><article class="pair" id="c12-q12" aria-label="Question 12 and matching practice">
+<div class="task original"><h4>Original 12</h4><p class="prompt">Use prime factorization and pairs to find √144. Show the pairs you make.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>144 = 16 × 9 = (2 × 2) × (2 × 2) × (3 × 3).</li><li>Taking one factor from each equal pair gives √144 = 2 × 2 × 3 = 12.</li><li>Squaring the result gives 12² = 144.</li></ol>
+<p class="answer"><strong>12</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Use prime factorization and equal pairs to find √400. Show the pairs.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>400 = 16 × 25 = (2 × 2) × (2 × 2) × (5 × 5).</li><li>Taking one factor from each pair gives 2 × 2 × 5 = 20. Then 20² = 400 confirms the result.</li></ol>
+<p class="answer"><strong>20</strong></p></div></details>
+</article><article class="pair" id="c12-q13" aria-label="Question 13 and matching practice">
+<div class="task original"><h4>Original 13</h4><p class="prompt">Estimate √115 to the nearest whole number. Write the two nearby perfect squares.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>10² = 100 &lt; 115 &lt; 121 = 11², so the root lies between 10 and 11.</li><li>The midpoint is 10.5. Since 10.5² = 110.25 &lt; 115, √115 is above 10.5 and rounds to 11.</li></ol>
+<p class="answer"><strong>11 · Nearby squares 100 and 121</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Estimate √133 to the nearest whole number. Write the nearby perfect squares.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>11² = 121 &lt; 133 &lt; 144 = 12².</li><li>The midpoint is 11.5, and 11.5² = 132.25. Since 133 &gt; 132.25, the root rounds to 12.</li></ol>
+<p class="answer"><strong>12 · Nearby squares 121 and 144</strong></p></div></details>
+</article><article class="pair" id="c12-q14" aria-label="Question 14 and matching practice">
+<div class="task original"><h4>Original 14</h4><p class="prompt">Order √40, √70, and √95 from least to greatest. Show how you know.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The square root increases as its nonnegative input increases. Since 40 &lt; 70 &lt; 95, the roots keep that order.</li><li>As a check, the roots lie between 6 and 7, 8 and 9, and 9 and 10, respectively.</li></ol>
+<p class="answer"><strong>√40 &lt; √70 &lt; √95</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Order √90, √30, and √62 from least to greatest. Explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">Compare the radicands to get 30 &lt; 62 &lt; 90. Taking the nonnegative square root preserves the order, so the roots appear in that same sequence.</p>
+<p class="answer"><strong>√30 &lt; √62 &lt; √90</strong></p></div></details>
+</article><article class="pair" id="c12-q15" aria-label="Question 15 and matching practice">
+<div class="task original"><h4>Original 15</h4><p class="prompt">A square floor has an area of 200 m². Estimate its side length to the nearest metre.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>For a square, s² = area, so the side length is √200 m.</li><li>Since 14² = 196 and 15² = 225, it lies between 14 and 15 m.</li><li>14.5² = 210.25 and 200 &lt; 210.25, so the side is nearer 14 m.</li></ol>
+<p class="answer"><strong>14 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A square dance floor has an area of 280 ft². Estimate its side length to the nearest foot.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The side is √280 ft. The nearby squares are 16² = 256 and 17² = 289.</li><li>Since 280 &gt; 16.5² = 272.25, the side length rounds to 17 ft.</li></ol>
+<p class="answer"><strong>17 ft</strong></p></div></details>
+</article><article class="pair" id="c12-q16" aria-label="Question 16 and matching practice">
+<div class="task original"><h4>Original 16</h4><p class="prompt">Sam says √80 ≈ 8. Tom says √80 ≈ 9. Who has the better estimate? Prove it using nearby squares.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>8² = 64 &lt; 80 &lt; 81 = 9², so √80 is between 8 and 9.</li><li>The midpoint is 8.5, and 8.5² = 72.25 &lt; 80, so √80 is above 8.5. That makes Tom’s 9 closer.</li></ol>
+<p class="answer"><strong>Tom. The nearest whole number is 9.</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Kai says √48 ≈ 6. Maya says √48 ≈ 7. Who has the better estimate? Use nearby squares to prove it.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>6² = 36 &lt; 48 &lt; 49 = 7².</li><li>The midpoint, 6.5, has square 42.25. Since 48 is greater than 42.25, its root is closer to 7.</li></ol>
+<p class="answer"><strong>Maya. The nearest whole number is 7.</strong></p></div></details>
+</article><article class="pair" id="c12-q17" aria-label="Question 17 and matching practice">
+<div class="task original"><h4>Original 17</h4><p class="prompt">Use prime factorization and factor pairs to find √324.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>324 = 4 × 81 = (2 × 2) × (3 × 3) × (3 × 3).</li><li>Taking one factor per equal pair gives 2 × 3 × 3 = 18.</li><li>As a check, 18 × 18 = 324.</li></ol>
+<p class="answer"><strong>18</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Use prime factorization and pairs of equal primes to find √576.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>576 = 64 × 9 = (2 × 2) × (2 × 2) × (2 × 2) × (3 × 3).</li><li>Taking one factor per pair gives 2 × 2 × 2 × 3 = 24. Check that 24² = 576.</li></ol>
+<p class="answer"><strong>24</strong></p></div></details>
+</article><article class="pair" id="c12-q18" aria-label="Question 18 and matching practice">
+<div class="task original"><h4>Original 18</h4><p class="prompt">A square garden has an area of 500 m². Estimate its side length to the nearest metre and explain why.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The side is √500 m. Since 22² = 484 and 23² = 529, it lies between 22 and 23 m.</li><li>22.5² = 506.25, and 500 &lt; 506.25, so the side is below 22.5 m and rounds to 22 m.</li></ol>
+<p class="answer"><strong>22 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A square playground has an area of 700 m². Estimate its side length to the nearest meter and explain.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The side is √700 m. The bounds are 26² = 676 and 27² = 729.</li><li>Since 26.5² = 702.25 &gt; 700, the side is below the midpoint and rounds to 26 m.</li></ol>
+<p class="answer"><strong>26 m</strong></p></div></details>
+</article><article class="pair" id="c12-q19" aria-label="Question 19 and matching practice">
+<div class="task original"><h4>Original 19</h4><p class="prompt">Without a calculator, decide which is greater: √150 or 12. Explain using perfect squares.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">12² = 144 and 13² = 169. Since 144 &lt; 150 &lt; 169, the square root lies between 12 and 13 and is greater than 12.</p>
+<p class="answer"><strong>√150 is greater.</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Without a calculator, use perfect squares to decide whether √190 or 14 is greater.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">13² = 169 and 14² = 196. Since 169 &lt; 190 &lt; 196, the root lies between 13 and 14 and is less than 14.</p>
+<p class="answer"><strong>14 is greater.</strong></p></div></details>
+</article><article class="pair" id="c12-q20" aria-label="Question 20 and matching practice">
+<div class="task original"><h4>Original 20</h4><p class="prompt">A square courtyard has area 1764 m². Use prime factorization to find its exact side length. Check your answer by squaring it.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Use 1764 = 4 × 441. Break 441 into 21 × 21 and each 21 into 3 × 7.</li><li>Pairing the primes gives 1764 = (2 × 2) × (3 × 3) × (7 × 7), so the side is 2 × 3 × 7 = 42 m.</li><li>Squaring the result gives 42² = (40 + 2)² = 1600 + 160 + 4 = 1764.</li></ol>
+<p class="answer"><strong>42 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A square plaza has area 1296 ft². Use prime factorization to find its exact side length, then check by squaring.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Split 1296 into 16 × 81. The prime pairs are (2 × 2), (2 × 2), (3 × 3), and (3 × 3).</li><li>Using one prime from each pair gives 2 × 2 × 3 × 3 = 36.</li><li>Squaring the result gives 36 × 36 = 1296, so the side is 36 ft.</li></ol>
+<p class="answer"><strong>36 ft</strong></p></div></details>
+</article></section>
+<section class="chapter" id="chapter-13" aria-labelledby="title-13" data-strand="Number Sense">
+<header><p class="chapter-kicker">Chapter 13 <span aria-hidden="true">/</span> Number Sense</p>
+<h2 id="title-13">From area to side length</h2>
+<p class="source">Image 13 · Bell ringer · Grade 8, Week 1</p>
+<p class="goal">Review radical vocabulary, connect squares and square roots, and estimate a side from a square’s area.</p></header>
+<div class="theory"><h3>Learn the math</h3><div class="theory-grid"><div class="concepts"><div><h4>Read the expression</h4><p>In √100, the radical sign directs you to take the principal square root. The number under it is the radicand.</p></div><div><h4>Build a factor tree</h4><p>Start with a factor pair, then split each composite factor again. The prime numbers at the ends multiply to give the starting number.</p></div><div><h4>Use nearby squares</h4><p>A square’s side length is the square root of its area. When the area is between perfect squares, use the squared midpoint to decide which whole number is closer.</p></div></div>
+<figure class="diagram "><svg viewBox="10 0 317 221" role="img" aria-label="A square 3 units on a side. It is split into three rows by three columns for an area of 9 square units." xmlns="http://www.w3.org/2000/svg"><rect class="face-top" x="111" y="17" width="122" height="122" rx="2"/><path class="gridlines" d="M151.67 17v122m40.66-122v122M111 57.67h122m-122 40.66h122"/><path class="linkline" d="M111 155v11m122-11v11m-122-5h122M95 17H84m11 122H84m6-122v122"/><g text-anchor="middle"><text x="172" y="183">3 units</text><text x="57" y="83">3 units</text><text class="hot" x="172" y="211">3² = 9</text></g></svg><figcaption>The square has area 9 square units and side length √9 = 3 units.</figcaption></figure></div><div class="worked"><h4>Worked example</h4><p>For an area of 30 m², the side is between 5 m and 6 m. Since 30 &lt; 5.5² = 30.25, the nearest meter is 5 m.</p></div></div>
+<div class="chapter-tools"><nav class="jump" aria-label="Chapter 13 questions"><span class="jump-label">Jump to question</span><a href="#c13-q1" aria-label="Question 1">1</a><a href="#c13-q2" aria-label="Question 2">2</a><a href="#c13-q3" aria-label="Question 3">3</a><a href="#c13-q4" aria-label="Question 4">4</a></nav>
+<div class="actions"><button class="toggle-solutions" type="button">Show all solutions</button>
+<button class="print-chapter" type="button" title="Print this chapter with the solutions you have opened">Print chapter</button></div></div>
+<h3 class="set-title">Bell ringer</h3><p class="directions">Show your work for Questions 2–4.</p><article class="pair" id="c13-q1" aria-label="Question 1 and matching practice">
+<div class="task original"><h4>Original 1 <span>· Vocabulary</span></h4><p class="prompt">In √100, what is the mathematical name of 100?</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><p class="reasoning">The radicand is the number inside the radical. Here the radical acts on 100.</p>
+<p class="answer"><strong>Radicand</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">In √196, what is the mathematical name of 196?</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><p class="reasoning">The radical operates on 196, so that number is the radicand.</p>
+<p class="answer"><strong>Radicand</strong></p></div></details>
+</article><article class="pair" id="c13-q2" aria-label="Question 2 and matching practice">
+<div class="task original"><h4>Original 2 <span>· Squares and roots</span></h4><p class="prompt">Calculate: 8² and √64.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Multiplying 8 by itself gives 64.</li><li>The radical reverses that calculation for nonnegative values. Since 8 × 8 = 64, √64 = 8.</li></ol>
+<p class="answer"><strong>8² = 64 · √64 = 8</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Calculate 11² and √121.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Squaring 11 gives 11 × 11 = 121.</li><li>Taking the principal square root of 121 returns 11.</li></ol>
+<p class="answer"><strong>11² = 121 · √121 = 11</strong></p></div></details>
+</article><article class="pair" id="c13-q3" aria-label="Question 3 and matching practice">
+<div class="task original"><h4>Original 3 <span>· Prime factorization</span></h4><p class="prompt">Use a factor tree to write 60 as a product of primes.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>Split 60 into 6 and 10.</li><li>Split 6 into 2 and 3, and 10 into 2 and 5. All four endpoints are prime.</li><li>Multiplying the leaves gives 60 = 2 × 2 × 3 × 5.</li></ol><figure class="diagram tree"><svg viewBox="0 0 280 149" role="img" aria-label="Factor tree. 60 splits into 6 and 10. 6 splits into 2 and 3. 10 splits into 2 and 5." xmlns="http://www.w3.org/2000/svg"><path class="linkline" d="M140 30L75 65M140 30L205 65M75 77L44 119M75 77L105 119M205 77L175 119M205 77L236 119"/><g text-anchor="middle"><circle class="neutral" cx="140" cy="25" r="20"/><text x="140" y="31">60</text><circle class="neutral" cx="75" cy="70" r="17"/><text x="75" y="76">6</text><circle class="neutral" cx="205" cy="70" r="17"/><text x="205" y="76">10</text><circle class="prime" cx="44" cy="123" r="16"/><text x="44" y="129">2</text><circle class="prime" cx="105" cy="123" r="16"/><text x="105" y="129">3</text><circle class="prime" cx="175" cy="123" r="16"/><text x="175" y="129">2</text><circle class="prime" cx="236" cy="123" r="16"/><text x="236" y="129">5</text></g></svg><figcaption>The blue circles mark the prime factors.</figcaption></figure>
+<p class="answer"><strong>2² × 3 × 5</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">Use a factor tree to write 126 as a product of primes.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>Split 126 into 9 and 14.</li><li>Split 9 into 3 and 3, and 14 into 2 and 7.</li><li>Write the prime leaves as 126 = 2 × 3² × 7.</li></ol><figure class="diagram tree"><svg viewBox="0 0 280 149" role="img" aria-label="Factor tree. 126 splits into 9 and 14. 9 splits into 3 and 3. 14 splits into 2 and 7." xmlns="http://www.w3.org/2000/svg"><path class="linkline" d="M140 30L75 65M140 30L205 65M75 77L44 119M75 77L105 119M205 77L175 119M205 77L236 119"/><g text-anchor="middle"><circle class="neutral" cx="140" cy="25" r="20"/><text x="140" y="31">126</text><circle class="neutral" cx="75" cy="70" r="17"/><text x="75" y="76">9</text><circle class="neutral" cx="205" cy="70" r="17"/><text x="205" y="76">14</text><circle class="prime" cx="44" cy="123" r="16"/><text x="44" y="129">3</text><circle class="prime" cx="105" cy="123" r="16"/><text x="105" y="129">3</text><circle class="prime" cx="175" cy="123" r="16"/><text x="175" y="129">2</text><circle class="prime" cx="236" cy="123" r="16"/><text x="236" y="129">7</text></g></svg><figcaption>The blue circles mark the prime factors.</figcaption></figure>
+<p class="answer"><strong>2 × 3² × 7</strong></p></div></details>
+</article><article class="pair" id="c13-q4" aria-label="Question 4 and matching practice">
+<div class="task original"><h4>Original 4 <span>· Application and estimate</span></h4><p class="prompt">A square garden has an area of 50 m². Estimate one side to the nearest metre.</p></div>
+<details class="solution original">
+<summary>Original solution</summary><div class="solution-body"><ol class="reasoning"><li>The side length is √50 m since it squares to the garden’s area.</li><li>7² = 49 &lt; 50 &lt; 64 = 8².</li><li>Since 50 &lt; 7.5² = 56.25, the side is closer to 7 m.</li></ol>
+<p class="answer"><strong>7 m</strong></p></div></details>
+<div class="task practice"><h4>Try a similar problem</h4><p class="prompt">A square garden has an area of 67 m². Estimate one side to the nearest meter.</p></div>
+<details class="solution practice">
+<summary>Practice solution</summary><div class="solution-body"><ol class="reasoning"><li>The side is √67 m. Because 8² = 64 and 9² = 81, it is between 8 and 9 m.</li><li>67 &lt; 8.5² = 72.25, so √67 rounds to 8 and the length is about 8 m.</li></ol>
+<p class="answer"><strong>8 m</strong></p></div></details>
+</article></section></main></div>
+<footer class="footer"><div class="shell footer-inner"><span>Grade 8 Math Workbook</span><a href="#chapters">Back to chapters ↑</a></div></footer>
+<script>document.documentElement.classList.add('enhanced');
+
+const chapters = [...document.querySelectorAll('.chapter')];
+const menu = document.querySelector('#chapter-select');
+const rail = document.querySelector('.rail');
+let printTarget;
+
+function clearPrintTarget() {
+  printTarget?.classList.remove('print-target');
+  document.body.classList.remove('printing-chapter');
+  printTarget = undefined;
+}
+
+for (const chapter of chapters) {
+  const solutions = [...chapter.querySelectorAll('.solution')];
+  const toggle = chapter.querySelector('.toggle-solutions');
+  const syncToggle = () => {
+    toggle.textContent = solutions.every(solution => solution.open) ? 'Hide all solutions' : 'Show all solutions';
+  };
+  toggle.addEventListener('click', () => {
+    const expand = !solutions.every(solution => solution.open);
+    for (const solution of solutions) solution.open = expand;
+    syncToggle();
+  });
+  chapter.addEventListener('toggle', syncToggle, true);
+  chapter.querySelector('.print-chapter').addEventListener('click', () => {
+    clearPrintTarget();
+    printTarget = chapter;
+    chapter.classList.add('print-target');
+    document.body.classList.add('printing-chapter');
+    window.print();
+  });
+}
+
+window.addEventListener('afterprint', clearPrintTarget);
+menu.addEventListener('change', () => {
+  if (menu.value) window.location.hash = menu.value;
+});
+
+let updatePending = false;
+let currentChapter;
+function syncChapterNav() {
+  updatePending = false;
+  const visibleChapter = chapters.findLast(chapter => chapter.getBoundingClientRect().top <= 134);
+  if (visibleChapter === currentChapter) return;
+  currentChapter = visibleChapter;
+  menu.value = currentChapter?.id ?? '';
+  rail.querySelector('[aria-current]')?.removeAttribute('aria-current');
+  if (currentChapter) rail.querySelector(`[href="#${currentChapter.id}"]`).setAttribute('aria-current', 'location');
+}
+
+window.addEventListener('scroll', () => {
+  if (updatePending) return;
+  updatePending = true;
+  requestAnimationFrame(syncChapterNav);
+}, { passive: true });
+
+window.addEventListener('pageshow', syncChapterNav);
+</script>
+</body></html>
